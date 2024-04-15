@@ -1,0 +1,18 @@
+type: "object"
+required: ["registrationId", "registered", "userId", "taskId", "date", "duration"]
+properties:
+  registrationId:
+    type: "string"
+  registered:
+    type: "integer"
+    format: "int64"
+    description: "The registration time as Unix milliseconds timestamp"
+  userId:
+    type: "string"
+  taskId:
+    type: "string"
+  date:
+    type: "string"
+    format: "date"
+  duration:
+    $ref: Duration.yaml

@@ -1,0 +1,36 @@
+post:
+  tags:
+    - "Export"
+  operationId: "exportTimeRegistrationsForUser"
+  description: "Exports time registrations for the logged in user for a specific date range"
+  parameters:
+    - name: "start"
+      in: "query"
+      description: "The start date of the export interval (inclusive)"
+      required: true
+      schema:
+        type: "string"
+        format: "date"
+        example: "2024-03-11"
+    - name: "end"
+      in: "query"
+      description: "The end date of the export interval (inclusive)"
+      required: true
+      schema:
+        type: "string"
+        format: "date"
+        example: "2024-03-17"
+  responses:
+    "200":
+      description: "OK"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+          examples:
+            Example#1:
+              value: "Time exported successfully"
+    "401":
+      $ref: "./responses/UnauthorizedError.yaml"
+    "502":
+      $ref: "./responses/BadGateway.yaml"

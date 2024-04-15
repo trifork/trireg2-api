@@ -1,0 +1,54 @@
+get:
+  tags:
+    - "Tagging"
+  operationId: "getRegistrationTags"
+  description: "Gets the tags associated with the given time registration"
+  parameters:
+    - in: query
+      name: "registrationId"
+      schema:
+        type: "string"
+      required: true
+      description: "The ID of the registration to get tags for"
+  responses:
+    "200":
+        description: "List of tags for the requested registration"
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "./schemas/TagTimeRegistrationResponse.yaml"
+    "401":
+      $ref: "./responses/UnauthorizedError.yaml"
+    "404":
+      description: "Unable to find a time registration with the specified registrationId"
+    "502":
+      $ref: "./responses/BadGateway.yaml"
+post:
+  tags:
+    - "Tagging"
+  operationId: "tagRegistration"
+  description: "Tags a time registration with specified tag and optional tag value"
+  requestBody:
+    description: "A JSON object containing tagging information"
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "./schemas/TagTimeRegistrationRequest.yaml"
+  responses:
+    "200":
+      description: "Tag was successfully registered on the registration"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+    "401":
+      $ref: "./responses/UnauthorizedError.yaml"
+    "400":
+      description: "Tag was not added to the registration due to an issue with the request"
+    "404":
+      description: "No registration was found to tag"
+    "502":
+      $ref: "./responses/BadGateway.yaml"

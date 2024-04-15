@@ -1,0 +1,4 @@
+type: "string"
+description: "ISO 8601 formatted duration component <PnDTnHnMn.nS>. Each unit is optional, but at least one must be specified"
+format: duration
+example: "PT1H30M"

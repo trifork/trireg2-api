@@ -1,0 +1,19 @@
+type: "object"
+required: ["taskId", "date", "duration"]
+properties:
+  taskId:
+    type: "string"
+  date:
+    type: "string"
+    format: "date"
+  duration:
+    $ref: Duration.yaml
+  tags:
+    type: "array"
+    items:
+      required: ["tagConfigurationId"]
+      properties:
+        tagConfigurationId:
+          type: "string"
+        value:
+          type: "string"

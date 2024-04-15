@@ -1,0 +1,9 @@
+type: "object"
+required: ["timeRegistrationId", "tagConfigurationId"]
+properties:
+  timeRegistrationId:
+    type: "string"
+  tagConfigurationId:
+    type: "string"
+  value:
+    type: "string"
