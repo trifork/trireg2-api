@@ -2,10 +2,12 @@ openapi: "3.0.3"
 info:
   title: "Trireg2 API"
   description: "A JSON API for time registration"
-  version: "0.0.3"
+  version: "0.0.4"
 servers:
   - url: "http://0.0.0.0:8080"
 paths:
+  /login/:
+    $ref: login.yaml
   /time-registration/:
     $ref: time-registration.yaml
   /export/:
@@ -16,7 +18,7 @@ components:
   securitySchemes:
     openId:
       type: openIdConnect
-      openIdConnectUrl: /openid-configuration # TODO placeholder until we get real URL
+      openIdConnectUrl: https://oidc.hosted.trifork.com/auth/realms/trifork/.well-known/openid-configuration
   schemas:
     TimeRegistrationRequest:
       $ref: "./schemas/TimeRegistrationRequest.yaml"
@@ -24,4 +26,4 @@ components:
       $ref: "./schemas/TimeRegistrationResponse.yaml"
 security:
   - openId:
-      - trireg2-user
+      - openid
