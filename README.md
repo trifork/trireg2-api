@@ -1,7 +1,7 @@
 # TriReg2 OpenAPI specification
 
 A versioned [OpenAPI v3](https://spec.openapis.org/oas/v3.1.0) specification for the TriReg2 API. Kept in a separate repository to allow public access, and for
-clients to request changes or suggestions via pull requests or adding issues to the issue tracker.
+clients to request changes or suggestions via pull requests or adding issues to the GitHub issue tracker.
 
 The OpenAPI specification contains a user API for the new TriReg2 service.
 
