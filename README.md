@@ -11,20 +11,23 @@ Later, it will also contain an admin API and import APIs towards the TriReg2 ser
 The TriReg2 OpenAPI specification is published using a [GitHub action](https://github.com/trifork/trireg2-api/actions/workflows/api-publish.yml) which is triggered when creating a new release. 
 
 ### Create a new release
-Navigate to the `Code` tab and find the `Releases` section, and press the `Draft a new release` button. Create a new tag, for example v0.0.7, and add a title for your release, for example `Release v0.0.7`.
+Navigate to the `Code` tab and find the `Releases` section, and press the `Draft a new release` button. Create a new tag, for example a tag named `v0.0.7`, and add a title for your release, for example `Release v0.0.7`.
 
 Check the check-box `This is a pre-release`, if this is a pre-release version, and then press the `Publish release` button.
 
 ### Versioning
 
+(Work in progress..) 
 TODO
 
 ## Download the API
 
-Download the API as a zip file from Github assets, which can be found here... TODO
+(Work in progress..) 
+Download the API as a zip file from Github Assets, which can be found here... TODO
 
 ## Maven and Gradle artifacts
 
+(Work in progress..) 
 TODO 
 
 ## Git Submodule dependency
@@ -48,6 +51,8 @@ During development phase, if there are new changes to this API, update your subm
 ```
 git submodule update --recursive
 ```
+
+When updating the git submodule, it will refer to the latest version released (i.e. the head of the main branch). If you want to use another version of the API, for example a work-in-progress version of the API, which has been pushed as a branch in the API repo, you can just check that branch of the submodule out in your application source code and use it.
 
 ### Deploy keys and secrets
 
