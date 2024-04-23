@@ -25,11 +25,6 @@ TODO
 (Work in progress..) 
 Download the API as a zip file from Github Assets, which can be found here... TODO
 
-## Maven and Gradle artifacts
-
-(Work in progress..) 
-TODO 
-
 ## Git Submodule dependency
 
 You can also add a dependency to this API using this repo as a [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) in your application.
@@ -49,10 +44,32 @@ git submodule update --init --recursive
 During development phase, if there are new changes to this API, update your submodule from remote with the command (in your application root folder):
 
 ```
-git submodule update --recursive
+git submodule update --remote
 ```
 
-When updating the git submodule, it will refer to the latest version released (i.e. the head of the main branch). If you want to use another version of the API, for example a work-in-progress version of the API, which has been pushed as a branch in the API repo, you can just check that branch of the submodule out in your application source code and use it.
+When updating the git submodule, it will refer to the latest version released (i.e. the head of the main branch). If you want to use another version of the API, for example a work-in-progress version of the API, which has been pushed as a branch in the API repo, you can just checkout that branch of the submodule in your application source code and use it.
+
+You can get the status of the submodule with the command:
+
+```
+git submodule status
+```
+
+which shows the specific commit ID that the submodule is currently on. 
+
+Also, in some cases it can be helpful to manually add `branch = main` in the local `.gitmodules` file, for CI tools to properly fetch the submodule. 
+If not, it might claim it doesn't know which branch to pull.
+
+The content of `.gitmodules` could look like this:
+
+```
+[submodule "trireg2-api"]
+	path = trireg2-api
+	url = git@github.com:trifork/trireg2-api
+    branch = main
+```
+
+And then run `git submodule update --remote` if you manually updated the `.gitmodules` file.
 
 ### Deploy keys and secrets
 
