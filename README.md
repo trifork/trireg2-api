@@ -66,7 +66,7 @@ The content of `.gitmodules` could look like this:
 [submodule "trireg2-api"]
 	path = trireg2-api
 	url = git@github.com:trifork/trireg2-api
-    branch = main
+	branch = main
 ```
 
 And then run `git submodule update --remote` if you manually updated the `.gitmodules` file.

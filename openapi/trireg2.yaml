@@ -2,9 +2,9 @@ openapi: "3.0.3"
 info:
   title: "TriReg2 API"
   description: "An OpenAPI specification for time registrations"
-  version: "0.0.5"
+  version: "0.0.6"
 servers:
-  - url: "http://0.0.0.0:8080"
+- url: "http://0.0.0.0:8080"
 paths:
   /login/:
     $ref: login.yaml
@@ -14,6 +14,8 @@ paths:
     $ref: export.yaml
   /tag/:
     $ref: tagging.yaml
+  /import/:
+    $ref: import.yaml
 components:
   securitySchemes:
     openId:
@@ -25,5 +27,5 @@ components:
     TimeRegistrationResponse:
       $ref: "./schemas/TimeRegistrationResponse.yaml"
 security:
-  - openId:
-      - openid
+- openId:
+  - openid
