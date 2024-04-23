@@ -2,7 +2,7 @@ openapi: "3.0.3"
 info:
   title: "TriReg2 API"
   description: "An OpenAPI specification for time registrations"
-  version: "@VERSION@"
+  version: "0.0.5"
 servers:
   - url: "http://0.0.0.0:8080"
 paths:
