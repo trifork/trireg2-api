@@ -12,13 +12,13 @@ get:
       description: "The ID of the registration to get tags for"
   responses:
     "200":
-        description: "List of tags for the requested registration"
-        content:
-          application/json:
-            schema:
-              type: array
-              items:
-                $ref: "./schemas/TagTimeRegistrationResponse.yaml"
+      description: "List of tags for the requested registration"
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "./schemas/TagTimeRegistrationResponse.yaml"
     "401":
       $ref: "./responses/UnauthorizedError.yaml"
     "404":
@@ -52,3 +52,57 @@ post:
       description: "No registration was found to tag"
     "502":
       $ref: "./responses/BadGateway.yaml"
+put:
+  tags:
+    - "Tagging"
+  operationId: "updateTagRegistration"
+  description: "Updates a tag that was added to a time registration"
+  requestBody:
+    description: "A JSON object containing the updated tagging information"
+    required: true
+    content:
+      application/json:
+        schema:
+          type: "object"
+          required: ["tagId", "value"]
+          properties:
+            tagId:
+              type: "string"
+            value:
+              type: "string"
+  responses:
+    "200":
+      description: "Tag was successfully updated"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+    "400":
+      description: "The updated tag information yields an invalid tag"
+    "401":
+      $ref: "./responses/UnauthorizedError.yaml"
+    "404":
+      description: "The specified tag was not found"
+delete:
+  tags:
+    - "Tagging"
+  operationId: "deleteTagRegistration"
+  description: "Deletes a tag that was added to a time registration"
+  parameters:
+    - in: query
+      name: "tagId"
+      schema:
+        type: "string"
+      required: true
+      description: "The ID of the tag to delete"
+  responses:
+    "200":
+      description: "Tag was successfully removed"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+    "401":
+      $ref: "./responses/UnauthorizedError.yaml"
+    "404":
+      description: "The requested tag was not found and could not be deleted"
