@@ -1,4 +1,4 @@
-name: Validate YAML and JSON files
+name: Validate YAML Schema
 
 on:
   push:
@@ -6,17 +6,17 @@ on:
   pull_request:
     branches: [ "main" ]
 
-permissions:
-  contents: read
-
 jobs:
-  json-yaml-validate:
+  yaml-validate:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: json-yaml-validate
         id: json-yaml-validate
         uses: GrantBirki/json-yaml-validate@v2.7.1
+        with:
+          files: |
+            openapi/
 
