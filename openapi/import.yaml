@@ -14,12 +14,9 @@ post:
     "200":
       description: "OK"
       content:
-        text/plain:
+        application/json:
           schema:
-            type: "string"
-          examples:
-            Example#1:
-              value: "Time imported successfully"
+            $ref: "./schemas/ImportRegistrationResponse.yaml"
     "401":
       $ref: "./responses/UnauthorizedError.yaml"
     "502":

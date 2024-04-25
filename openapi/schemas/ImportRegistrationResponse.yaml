@@ -1,0 +1,10 @@
+type: "array"
+items:
+  required: ["registrationId", "status"]
+  properties:
+    registrationId:
+      type: "string"
+    status:
+      type: "string"
+    message:
+      type: "string"
