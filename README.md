@@ -1,31 +1,24 @@
 # TriReg2 OpenAPI specification
 
-A versioned [OpenAPI v3](https://spec.openapis.org/oas/v3.1.0) specification for the TriReg2 API. Kept in a separate repository to allow public access, and for
+A versioned [OpenAPI v3](https://spec.openapis.org/oas/v3.1.0) specification for the TriReg2 API. 
+
+This OpenAPI specification contains a user API for the new TriReg2 service. In future versions, it will also contain 
+an admin API, and import APIs towards the TriReg2 service.
+
+The OpenAPI yaml specifications are kept in a separate Github repository to allow public access, and for
 clients to request changes or suggestions via pull requests or adding issues to the GitHub issue tracker.
 
-The OpenAPI specification contains a user API for the new TriReg2 service.
+## Use the API
 
-Later, it will also contain an admin API and import APIs towards the TriReg2 service.
+For client applications that uses this API, either download the API as a zip file, or create a git submodule dependency of the API.
 
-## Publish a new API
-The TriReg2 OpenAPI specification is published using a [GitHub action](https://github.com/trifork/trireg2-api/actions/workflows/api-publish.yml) which is triggered when creating a new release. 
+The client apllications can utilize the various OpenAPI swagger client or server generators, to automaticallu create client or server code.
 
-### Create a new release
-Navigate to the `Code` tab and find the `Releases` section, and press the `Draft a new release` button. Create a new tag, for example a tag named `v0.0.7`, and add a title for your release, for example `Release v0.0.7`.
+### Download the API
 
-Check the check-box `This is a pre-release`, if this is a pre-release version, and then press the `Publish release` button.
+Download the latest version of the OpenAPI spec as a zip file from Github Assets (TODO... work in progress)
 
-### Versioning
-
-(Work in progress..) 
-TODO
-
-## Download the API
-
-(Work in progress..) 
-Download the API as a zip file from Github Assets, which can be found here... TODO
-
-## Git Submodule dependency
+### Git Submodule dependency
 
 You can also add a dependency to this API using this repo as a [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) in your application.
 
@@ -105,3 +98,13 @@ Copy the public part of the key pair generated in step 1 (i.e. the content in th
 ### Step 4:
 
 In the Github workflow file for your application repository that needs access to this submodule, for example in this case the `trireg2-app` repo, the ssh-key is mentioned as `secrets.SUBMODULE_CONTENT_PULL_KEY` in the step where the submodule is checked out and build together with the source code.
+
+## Publish a new API
+The TriReg2 OpenAPI specification is published using a [GitHub action](https://github.com/trifork/trireg2-api/actions/workflows/api-publish.yml) which is triggered when creating a new release. 
+
+### Create a new release of the API
+Navigate to the `Code` tab and find the `Releases` section, and press the `Draft a new release` button. Create a new tag, for example a tag named `v0.0.7`, and add a title for your release, for example `Release v0.0.7`.
+
+### Versioning of the API
+
+(Work in progress..) 
