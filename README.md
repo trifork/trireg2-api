@@ -16,7 +16,7 @@ The client apllications can utilize the various OpenAPI swagger client or server
 
 ### Download the API
 
-Download the latest version of the OpenAPI spec as a zip file from Github maven packages, which can be found [here](https://github.com/orgs/trifork/packages?repo_name=trireg2-api).
+Download the latest version of the OpenAPI spec as a zip file from Github Assets (TODO... work in progress)
 
 ### Git Submodule dependency
 
