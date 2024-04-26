@@ -8,11 +8,17 @@ an admin API, and import APIs towards the TriReg2 service.
 The OpenAPI yaml specifications are kept in a separate Github repository to allow public access, and for
 clients to request changes or suggestions via pull requests or adding issues to the GitHub issue tracker.
 
+## Swagger html API page 
+
+You can view the OpenAPI Swagger static html API page here:
+
+https://trireg2.tcs.trifork.dev/openapi/yaml or https://trireg2.tcs.trifork.dev/openapi/doc
+
 ## Use the API
 
 For client applications that uses this API, either download the API as a zip file, or create a git submodule dependency of the API.
 
-The client apllications can utilize the various OpenAPI swagger client or server generators, to automaticallu create client or server code.
+The client apllications can utilize the various OpenAPI swagger client or server generators, to automatically create client or server code.
 
 ### Download the API
 
