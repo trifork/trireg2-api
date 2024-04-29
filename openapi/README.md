@@ -1,4 +1,4 @@
-# api
+# Api
 Contains an OpenAPI v3 specification for the TriReg2 service.
 
 ## Module structure
