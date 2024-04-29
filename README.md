@@ -22,7 +22,7 @@ The client apllications can utilize the various OpenAPI swagger client or server
 
 ### Download the API
 
-Download the latest version of the OpenAPI spec as a zip file from Github Assets (TODO... work in progress)
+Download the latest version of the OpenAPI spec as a zip file from Github Artifacts for the given release, which can be found from the `Actions` tab. Select the latest release and find the `Artifacts` section at the bottom of the page.
 
 ### Git Submodule dependency
 
