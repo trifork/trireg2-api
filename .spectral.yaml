@@ -1,0 +1,8 @@
+# A Spectral configuration file is a YAML file that defines the rules that Spectral will use to lint your API description document.
+# All rules are enabled by default, but you can disable them by setting their severity to off.
+# https://docs.stoplight.io/docs/spectral/e5b9616d6d50c-rulesets 
+
+extends: [
+  # Spectral Default Rules:
+  [ "spectral:oas", all ]
+]
