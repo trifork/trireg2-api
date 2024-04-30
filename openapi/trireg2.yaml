@@ -6,15 +6,15 @@ info:
 servers:
 - url: "http://0.0.0.0:8080"
 paths:
-  /login/:
+  /login:
     $ref: login.yaml
-  /time-registration/:
+  /time-registration:
     $ref: time-registration.yaml
-  /export/:
+  /export:
     $ref: export.yaml
-  /tag/:
+  /tag:
     $ref: tagging.yaml
-  /import/:
+  /import:
     $ref: import.yaml
 components:
   securitySchemes:
