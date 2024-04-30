@@ -1,0 +1,19 @@
+
+name: Publish Artifacts (.zip)
+on:
+  release:
+    types: [ created ]
+
+jobs:
+  publish:
+    name: Publish zip to Github Artifacts
+    runs-on: ubuntu-latest
+    steps:      
+      - name: Checkout main repository
+        uses: actions/checkout@v4
+
+      - name: Use the Upload Artifact GitHub Action to zip the files and upload
+        uses: actions/upload-artifact@v4
+        with: 
+          name: trireg2-api-download-as-zip
+          path: openapi

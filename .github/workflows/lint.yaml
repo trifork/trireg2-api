@@ -1,0 +1,19 @@
+name: lint
+
+on:
+  pull_request:
+    paths:
+      - 'openapi/**'
+      - '.spectral.yaml'
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+       # checkout repository
+       - uses: actions/checkout@v4
+         
+       # Run Spectral and lint the OpenAPI file(s)
+       - uses: stoplightio/spectral-action@latest
+         with:
+           file_glob: "openapi/trireg2.yaml"
