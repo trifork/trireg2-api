@@ -1,6 +1,6 @@
 get:
   tags:
-    - "Time registration"
+  - "Time registration"
   operationId: "getTimeRegistrationsForUser"
   description: "Returns time registrations for a user"
   responses:
@@ -16,11 +16,11 @@ get:
       $ref: "./responses/UnauthorizedError.yaml"
 post:
   tags:
-    - "Time registration"
+  - "Time registration"
   operationId: "addTimeRegistrationForUser"
   description: "Registers time for a user"
   requestBody:
-    description: "A JSON object containing time-registration information"
+    description: "A JSON object containing time registration information"
     required: true
     content:
       application/json:

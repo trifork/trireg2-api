@@ -8,5 +8,5 @@ items:
       type: "string"
       description: "Describes the status of the registration (SUCCESS, PENDING, FAILED)"
     message:
-      description: "When the status = FAILED, this will provide a description of the problem"
+      description: "When status = FAILED, this will provide a description of the problem"
       type: "string"
