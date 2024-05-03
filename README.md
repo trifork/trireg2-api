@@ -16,9 +16,18 @@ https://trireg2.tcs.trifork.dev/openapi/yaml or https://trireg2.tcs.trifork.dev/
 
 ## Use the API
 
-For client applications that uses this API, either download the API as a zip file, or create a git submodule dependency of the API.
+For client applications that uses this API, either download the API as a zip file, or create a Git Submodule dependency of the API.
 
 The client apllications can utilize the various OpenAPI swagger client or server generators, to automatically create client or server code.
+
+### Authentication
+
+The API is protected using the following security schemes:
+
+- HTTP authentication scheme for Basic Auth (in the Authorization header)
+- OpenID Connect Discovery (OIDC)
+
+Note!! The Basic Auth security scheme is only a temporary option to be used during Hackerdays on May 13.
 
 ### Download the API
 
