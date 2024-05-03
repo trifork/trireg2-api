@@ -1,0 +1,23 @@
+post:
+  tags:
+  - "Import"
+  operationId: "importTimeRegistrations"
+  description: "Imports the given time registrations into the system"
+  requestBody:
+    description: "A JSON object containing time-registration information"
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "./schemas/ImportRegistrationRequest.yaml"
+  responses:
+    "200":
+      description: "OK"
+      content:
+        application/json:
+          schema:
+            $ref: "./schemas/ImportRegistrationResponse.yaml"
+    "401":
+      $ref: "./responses/UnauthorizedError.yaml"
+    "502":
+      $ref: "./responses/BadGateway.yaml"

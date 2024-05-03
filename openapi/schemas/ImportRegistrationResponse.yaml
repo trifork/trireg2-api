@@ -1,0 +1,12 @@
+type: "array"
+items:
+  required: ["registrationId", "status"]
+  properties:
+    registrationId:
+      type: "string"
+    status:
+      type: "string"
+      description: "Describes the status of the registration (SUCCESS, PENDING, FAILED)"
+    message:
+      description: "When status = FAILED, this will provide a description of the problem"
+      type: "string"
