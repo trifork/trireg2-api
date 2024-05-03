@@ -19,6 +19,9 @@ components:
     openId:
       type: openIdConnect
       openIdConnectUrl: https://oidc.hosted.trifork.com/auth/realms/trifork/.well-known/openid-configuration
+    basicAuth:
+      type: http
+      scheme: basic
   schemas:
     TimeRegistrationRequest:
       $ref: "./schemas/TimeRegistrationRequest.yaml"
@@ -27,3 +30,4 @@ components:
 security:
   - openId:
       - openid
+  - basicAuth: []
