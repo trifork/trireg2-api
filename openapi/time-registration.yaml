@@ -66,10 +66,16 @@ put:
           examples:
             Success:
               value: "Time updated successfully"
+    "400":
+      description: "Bad update request"
+      content:
+        text/plain:
+          schema:
+            type: "string"
     "401":
       $ref: "./responses/UnauthorizedError.yaml"
     "404":
-      description: "Bad update request"
+      description: "Time registration not found"
       content:
         text/plain:
           schema:
