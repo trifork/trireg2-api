@@ -1,8 +1,5 @@
 type: "object"
-required: ["taskId", "date", "duration", "status"]
 properties:
-  taskId:
-    type: "string"
   date:
     type: "string"
     format: "date"
