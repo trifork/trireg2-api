@@ -1,8 +1,10 @@
 type: "array"
 items:
-  required: ["tagConfigurationId", "tagValueType", "tagTaskRelation"]
+  required: ["tagConfigurationId", "tagConfigurationName", "tagValueType", "tagTaskRelation"]
   properties:
     tagConfigurationId:
+      type: "string"
+    tagConfigurationName:
       type: "string"
     tagValueType:
       type: "string"
