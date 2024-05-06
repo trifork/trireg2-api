@@ -1,0 +1,12 @@
+type: "array"
+items:
+  required: ["tagConfigurationId", "tagValueType", "tagTaskRelation"]
+  properties:
+    tagConfigurationId:
+      type: "string"
+    tagValueType:
+      type: "string"
+      description: "Describes the value type of the tag."
+    tagTaskRelation:
+      type: "string"
+      description: "Specifies the relation to the task. For example, whether the tag is optional or mandatory"

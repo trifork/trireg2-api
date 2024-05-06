@@ -1,0 +1,12 @@
+type: "object"
+required: ["taskId", "date", "duration", "status"]
+properties:
+  taskId:
+    type: "string"
+  date:
+    type: "string"
+    format: "date"
+  duration:
+    $ref: Duration.yaml
+  status:
+    type: "string"

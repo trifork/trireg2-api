@@ -1,0 +1,21 @@
+get:
+  tags:
+    - "Tasks"
+  operationId: "getTasksForUser"
+  description: "Gets the tasks available to the user"
+  parameters:
+    - name: "user"
+      in: "query"
+      description: "The id of the user to get tasks for (Default is calling user)"
+      required: false
+      schema:
+        type: "string"
+  responses:
+    "200":
+      description: "Successfully fetched list of tasks"
+      content:
+        application/json:
+          schema:
+            $ref: "./schemas/TaskResponse.yaml"
+    "401":
+      $ref: "./responses/UnauthorizedError.yaml"
