@@ -22,7 +22,7 @@ Notice that tokens from the Trifork OIDC server expires after 5 minutes, so you 
 ## APIs
 
 ### User API
-From a users perspective, the core data model consists of **tasks**, **time registrations** and **tags**. 
+From a user's perspective, the core data model consists of **tasks**, **time registrations** and **tags**. 
 
 * A **task** is something you can associate time registrations with.
 * A **time registration** is a record of some time spent on some task by some employee on some day.  
