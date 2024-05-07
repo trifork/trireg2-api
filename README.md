@@ -20,6 +20,10 @@ For client applications that uses this API, either download the API as a zip fil
 
 The client apllications can utilize the various OpenAPI swagger client or server generators, to automatically create client or server code.
 
+## Getting started guide
+
+See [this guide](docs/README.md)
+
 ### Authentication
 
 The API is protected using the following security schemes:
