@@ -1,5 +1,5 @@
 type: "object"
-required: ["registrationId", "registered", "userId", "taskId", "date", "duration"]
+required: ["registrationId", "registered", "userId", "taskId", "date", "duration", "status"]
 properties:
   registrationId:
     type: "string"
@@ -16,3 +16,5 @@ properties:
     format: "date"
   duration:
     $ref: Duration.yaml
+  status:
+    type: "string"
