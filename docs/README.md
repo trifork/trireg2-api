@@ -17,7 +17,7 @@ All registrations and queries you perform will be associated with the username y
 ### OpenID Connect
 There is support for OpenID Connect (OIDC) authentication, but that will require more work from your side. You can log in using the endpoint specified in https://oidc.hosted.trifork.com/auth/realms/trifork/.well-known/openid-configuration, and then send the generated JWT in the authorization header of all your requests.
 
-Notice that tokens from the Trifork OIDC server expires after 5 minutes, so you need to refresh your token regularly.
+Notice that access tokens from the Trifork OIDC server expires after 5 minutes, so you need to refresh your access token regularly.
 
 ## APIs
 
