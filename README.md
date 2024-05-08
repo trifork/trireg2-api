@@ -24,7 +24,7 @@ The client apllications can utilize the various OpenAPI swagger client or server
 
 See [this guide](docs/README.md)
 
-### Authentication
+d### Authentication
 
 The API is protected using the following security schemes:
 
