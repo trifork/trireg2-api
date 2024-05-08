@@ -45,3 +45,7 @@ All of these will expect the same general structure - a list of time registratio
 Currently only allows exporting time registrations to a test-system running the old Trireg on an Azure server. This is available at https://triforktimeregmvcweb20240502133054.azurewebsites.net/ - if you need to be able to access this system, we need to create a user for you. Contact the team for this.
 
 We plan to expand this with other export options, such as exporting to CSV/JSON/XML, or deep integrations with other systems.
+
+## Examples of usage
+
+See examples of API usage [here](examples/examples.md).
