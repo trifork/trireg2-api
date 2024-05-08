@@ -6,7 +6,7 @@ In the following, some examples of using the TriReg2 API are provided.
 
 This section presents some [`curl`](https://curl.se/) commands as examples of calling the TriReg2 server running in TCS (development environment) via the TriReg2 API.
 
-The curl commands that specifies basic auth in the requests use a test user named `testuser` with default password `triregpassword`. This test user has already been created in the test system, which means you can run the commands out of the box. But, be aware that the data of this test user is available to everyone running commands for that user.
+The curl commands that specifies basic auth in the requests use a test user named `testuser` with default password `triregpassword1`. This test user has already been created in the test system, which means you can run the commands out of the box. But, be aware that the data of this test user is available to everyone running commands for that user.
 
 Also, at the moment, the TriReg2 server running in TCS has no database configured yet, so every time registration created via the API will only be kept in memory in the TriReg2 server, unless you export the time registration data to the old trireg server via the export API. 
 
