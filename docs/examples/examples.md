@@ -2,6 +2,10 @@
 
 In the following, some examples of using the TriReg2 API are provided.
 
+The base URL of the TriReg2 service running in development environment in TCS is: 
+
+`https://trireg2.tcs.trifork.dev`
+
 ## Curl
 
 This section presents some [`curl`](https://curl.se/) commands as examples of calling the TriReg2 server running in TCS (development environment) via the TriReg2 API.
