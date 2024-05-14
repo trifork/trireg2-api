@@ -45,3 +45,5 @@ post:
         text/plain:
           schema:
             type: "string"
+    "401":
+      $ref: "./responses/UnauthorizedError.yaml"

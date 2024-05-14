@@ -1,9 +1,12 @@
 type: "object"
-required: ["tagConfigurationName", "tagValueType"]
+required: ["name", "valueType"]
 properties:
-  tagConfigurationName:
+  name:
     type: "string"
     description: "The name of the tag configuration"
-  tagValueType:
+  description:
+    type: "string"
+    description: "A description of the tag configuration"
+  valueType:
     type: "string"
     description: "Describes the value type of the tag."
