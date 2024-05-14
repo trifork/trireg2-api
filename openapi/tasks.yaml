@@ -33,3 +33,12 @@ post:
   responses:
     "200":
       description: "Successfully created the task"
+      content:
+        text/plain:
+          schema:
+            type: string
+          examples:
+            Success:
+              value: "Successfully created task"
+    "401":
+      $ref: "./responses/UnauthorizedError.yaml"
