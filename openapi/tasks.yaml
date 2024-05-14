@@ -25,6 +25,7 @@ post:
   operationId: "createNewTask"
   description: "Creates a new task"
   requestBody:
+    required: true
     content:
       application/json:
         schema:

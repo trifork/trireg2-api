@@ -4,6 +4,7 @@ post:
   operationId: "createNewTagTaskMapping"
   description: "Creates a new relation between a task and a tag configuration"
   requestBody:
+    required: true
     content:
       application/json:
         schema:

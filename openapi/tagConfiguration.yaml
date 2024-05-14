@@ -33,6 +33,7 @@ post:
   operationId: "createTagConfiguration"
   description: "Creates a new tag configuration"
   requestBody:
+    required: true
     content:
       application/json:
         schema:
