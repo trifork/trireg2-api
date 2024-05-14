@@ -30,7 +30,6 @@ get:
 post:
   tags:
     - "TagConfigurations"
-    - "Admin"
   operationId: "createTagConfiguration"
   description: "Creates a new tag configuration"
   requestBody:

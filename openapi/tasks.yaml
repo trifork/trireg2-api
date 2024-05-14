@@ -22,7 +22,6 @@ get:
 post:
   tags:
     - "Tasks"
-    - "Admin"
   operationId: "createNewTask"
   description: "Creates a new task"
   requestBody:
