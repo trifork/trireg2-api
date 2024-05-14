@@ -1,4 +1,14 @@
 type: "object"
-required: []
+required: ["tagConfigurationId", "taskId", "relation"]
 properties:
-  
+  tagConfigurationId:
+    type: string
+  taskId:
+    type: string
+  relation:
+    type: string
+    description: "The type of relation between the task and tag."
+  defaultValue:
+    type: string
+    default: ""
+    description: "The default value"
