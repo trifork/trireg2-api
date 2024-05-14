@@ -19,3 +19,17 @@ get:
             $ref: "./schemas/TaskResponse.yaml"
     "401":
       $ref: "./responses/UnauthorizedError.yaml"
+post:
+  tags:
+    - "Tasks"
+    - "Admin"
+  operationId: "createNewTask"
+  description: "Creates a new task"
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "./schemas/admin/TaskCreateRequest.yaml"
+  responses:
+    "200":
+      description: "Successfully created the task"

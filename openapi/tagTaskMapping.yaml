@@ -1,0 +1,10 @@
+post:
+  description: ""
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "./schemas/admin/TagTaskMappingCreateRequest.yaml"
+  responses:
+    "200":
+      description: "ok"

@@ -20,6 +20,8 @@ paths:
     $ref: tasks.yaml
   /config/tag:
     $ref: tagConfiguration.yaml
+  /config/task-tag:
+    $ref: tagTaskMapping.yaml
 components:
   securitySchemes:
     openId:
