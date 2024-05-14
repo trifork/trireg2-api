@@ -2,6 +2,10 @@
 
 In the following, some examples of using the TriReg2 API are provided.
 
+The base URL of the TriReg2 service running in development environment in TCS is: 
+
+`https://trireg2.tcs.trifork.dev`
+
 ## Curl
 
 This section presents some [`curl`](https://curl.se/) commands as examples of calling the TriReg2 server running in TCS (development environment) via the TriReg2 API.
@@ -12,6 +16,9 @@ Also, at the moment, the TriReg2 server running in TCS has no database configure
 
 The old trireg server, which is used in this setup, is running in a test environment, and is only used by the TriReg2 server during test and development.
 
+### Duration
+
+The duration provided in some of the API requests or responses must be specified as an ISO 8601 formatted duration component, on the form `PnDTnHnMn.nS`. For example, `PT1H30M` representing 1 hour and 30 minutes.
 
 ### Create 
 

@@ -19,6 +19,18 @@ There is support for OpenID Connect (OIDC) authentication, but that will require
 
 Notice that access tokens from the Trifork OIDC server expires after 5 minutes, so you need to refresh your access token regularly.
 
+The following information is required for the OpenID connect flow:
+
+```
+
+Auth URL: https://oidc.hosted.trifork.com/auth/realms/trifork/protocol/openid-connect/auth
+Token URL: https://oidc.hosted.trifork.com/auth/realms/trifork/protocol/openid-connect/token
+Client ID: tidsreg
+Client Secret: not-used
+Scope: openid
+
+```
+
 ## APIs
 
 ### User API
