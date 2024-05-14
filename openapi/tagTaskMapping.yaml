@@ -12,3 +12,9 @@ post:
   responses:
     "200":
       description: "ok"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+    "401":
+      $ref: "./responses/UnauthorizedError.yaml"
