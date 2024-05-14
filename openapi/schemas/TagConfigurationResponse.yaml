@@ -1,12 +1,15 @@
 type: "array"
 items:
-  required: ["tagConfigurationId", "tagConfigurationName", "tagValueType", "tagTaskRelation"]
+  required: ["tagConfigurationId", "tagConfigurationName", "tagDescription", "tagValueType", "tagTaskRelation"]
   properties:
     tagConfigurationId:
       type: "string"
     tagConfigurationName:
       type: "string"
       description: "The name of the tag configuration"
+    tagDescription:
+      type: "string"
+      description: "A description of the tag configuration"
     tagValueType:
       type: "string"
       description: "Describes the value type of the tag."
