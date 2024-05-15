@@ -1,0 +1,8 @@
+type: "array"
+items:
+  required: ["tagConfigurationId"]
+  properties:
+    tagConfigurationId:
+      type: "string"
+    value:
+      type: "string"

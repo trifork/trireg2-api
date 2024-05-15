@@ -12,11 +12,4 @@ items:
     duration:
       $ref: Duration.yaml
     tags:
-      type: "array"
-      items:
-        required: ["tagConfigurationId"]
-        properties:
-          tagConfigurationId:
-            type: "string"
-          value:
-            type: "string"
+      $ref: Tag.yaml
