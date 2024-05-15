@@ -4,7 +4,7 @@ get:
   operationId: "getTagConfigurations"
   description: "Gets all tag configurations that are applicable to the provided task"
   parameters:
-    - name: "task"
+    - name: "taskId"
       in: "query"
       description: "The id of the task to get applicable tag configurations for"
       required: true
@@ -26,4 +26,69 @@ get:
     "401":
       $ref: "./responses/UnauthorizedError.yaml"
     "404":
-      description: "Unable to find tag configurations for the specified task (Task does not exist)"
+      description: "Unable to find tag configurations for the specified task (No task with specified taskId exists)"
+post:
+  tags:
+    - "TagConfigurations"
+  operationId: "createTagConfiguration"
+  description: "Creates a new tag configuration"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "./schemas/admin/TagConfigurationCreateRequest.yaml"
+  responses:
+    "200":
+      description: "The tag configuration was successfully created"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+    "400":
+      description: "Request contains invalid data and the tag configuration was not created"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+    "401":
+      $ref: "./responses/UnauthorizedError.yaml"
+put:
+  tags:
+    - "TagConfigurations"
+  operationId: "updateTagConfiguration"
+  description: "Updates an existing tag configuration"
+  parameters:
+    - name: "tagConfigurationId"
+      in: "query"
+      description: "The id of the tag configuration to update"
+      required: true
+      schema:
+        type: "string"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "./schemas/admin/TagConfigurationUpdateRequest.yaml"
+  responses:
+    "200":
+      description: "The tag configuration was successfully updated"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+    "400":
+      description: "Request contains invalid data and the tag configuration was not updated"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+    "401":
+      $ref: "./responses/UnauthorizedError.yaml"
+    "404":
+      description: "The specified task configuration was not found"
+      content:
+        text/plain:
+          schema:
+            type: "string"

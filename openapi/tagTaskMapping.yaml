@@ -1,0 +1,26 @@
+post:
+  tags:
+    - "TagTaskMapping"
+  operationId: "createNewTagTaskMapping"
+  description: "Creates a new relation between a task and a tag configuration"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "./schemas/admin/TagTaskMappingCreateRequest.yaml"
+  responses:
+    "200":
+      description: "TagTask mapping successfully created"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+    "400":
+      description: "Request contains invalid data and the TagTask mapping could not be created"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+    "401":
+      $ref: "./responses/UnauthorizedError.yaml"

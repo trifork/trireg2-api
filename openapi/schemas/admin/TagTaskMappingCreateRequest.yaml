@@ -1,0 +1,18 @@
+type: "object"
+required: ["tagConfigurationId", "taskId", "relation"]
+properties:
+  tagConfigurationId:
+    type: "string"
+  taskId:
+    type: "string"
+  relation:
+    type: "string"
+    description: "The type of relation between the task and tag."
+    enum:
+      - "optional"
+      - "mandatory"
+      - "hidden"
+  defaultValue:
+    type: "string"
+    default: ""
+    description: "The default value to use when adding the tag to a tag configuration"

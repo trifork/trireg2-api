@@ -4,9 +4,9 @@ get:
   operationId: "getTasksForUser"
   description: "Gets the tasks available to the user"
   parameters:
-    - name: "user"
+    - name: "userId"
       in: "query"
-      description: "The id of the user to get tasks for (Default is calling user)"
+      description: "The id of the user to get tasks for (Default is user logged in)"
       required: false
       schema:
         type: "string"
@@ -16,6 +16,77 @@ get:
       content:
         application/json:
           schema:
-            $ref: "./schemas/TaskResponse.yaml"
+            $ref: "./schemas/TaskCreateResponse.yaml"
     "401":
       $ref: "./responses/UnauthorizedError.yaml"
+post:
+  tags:
+    - "Tasks"
+  operationId: "createNewTask"
+  description: "Create a new task"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "./schemas/admin/TaskCreateRequest.yaml"
+  responses:
+    "200":
+      description: "Successfully created the task"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+          examples:
+            Success:
+              value: "Successfully created task"
+    "400":
+      description: "Request contains invalid data and the task was not created"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+    "401":
+      $ref: "./responses/UnauthorizedError.yaml"
+put:
+  tags:
+    - "Tasks"
+  operationId: "updateTask"
+  description: "Updates an existing task"
+  parameters:
+    - name: "taskId"
+      in: "query"
+      description: "The id of the task to update"
+      required: true
+      schema:
+        type: "string"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "./schemas/admin/TaskUpdateRequest.yaml"
+  responses:
+    "200":
+      description: "Successfully updated the task"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+          examples:
+            Success:
+              value: "Successfully updated task"
+    "400":
+      description: "Request contains invalid data and the task was not updated"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+    "401":
+      $ref: "./responses/UnauthorizedError.yaml"
+    "404":
+      description: "The specified task was not found"
+      content:
+        text/plain:
+          schema:
+            type: "string"
