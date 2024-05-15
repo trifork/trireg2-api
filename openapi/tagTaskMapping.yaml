@@ -11,7 +11,13 @@ post:
           $ref: "./schemas/admin/TagTaskMappingCreateRequest.yaml"
   responses:
     "200":
-      description: "ok"
+      description: "TagTask mapping successfully created"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+    "400":
+      description: "Request contains invalid data and the tag-task mapping could not be created"
       content:
         text/plain:
           schema:
