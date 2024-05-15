@@ -26,7 +26,7 @@ get:
     "401":
       $ref: "./responses/UnauthorizedError.yaml"
     "404":
-      description: "Unable to find tag configurations for the specified task (Task does not exist)"
+      description: "Unable to find tag configurations for the specified task (No task with specified taskId exists)"
 post:
   tags:
     - "TagConfigurations"

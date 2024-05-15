@@ -1,6 +1,6 @@
 type: "array"
 items:
-  required: ["registrationId", "status"]
+  required: ["timeRegistrationId", "status"]
   properties:
     registrationId:
       type: "string"

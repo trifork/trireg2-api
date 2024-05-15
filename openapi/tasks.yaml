@@ -6,7 +6,7 @@ get:
   parameters:
     - name: "userId"
       in: "query"
-      description: "The id of the user to get tasks for (Default is calling user)"
+      description: "The id of the user to get tasks for (Default is user logged in)"
       required: false
       schema:
         type: "string"
@@ -16,7 +16,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "./schemas/TaskResponse.yaml"
+            $ref: "./schemas/TaskCreateResponse.yaml"
     "401":
       $ref: "./responses/UnauthorizedError.yaml"
 post:

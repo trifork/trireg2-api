@@ -8,6 +8,10 @@ properties:
   relation:
     type: "string"
     description: "The type of relation between the task and tag."
+    enum:
+      - "optional"
+      - "mandatory"
+      - "hidden"
   defaultValue:
     type: "string"
     default: ""

@@ -17,7 +17,7 @@ post:
           schema:
             type: "string"
     "400":
-      description: "Request contains invalid data and the tag-task mapping could not be created"
+      description: "Request contains invalid data and the TagTask mapping could not be created"
       content:
         text/plain:
           schema:
