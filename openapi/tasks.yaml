@@ -65,7 +65,7 @@ put:
     content:
       application/json:
         schema:
-          $ref: "./schemas/admin/TaskCreateRequest.yaml"
+          $ref: "./schemas/admin/TaskUpdateRequest.yaml"
   responses:
     "200":
       description: "Successfully updated the task"

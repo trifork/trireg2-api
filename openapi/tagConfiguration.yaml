@@ -70,7 +70,7 @@ put:
     content:
       application/json:
         schema:
-          $ref: "./schemas/admin/TagConfigurationCreateRequest.yaml"
+          $ref: "./schemas/admin/TagConfigurationUpdateRequest.yaml"
   responses:
     "200":
       description: "The tag configuration was successfully updated"
