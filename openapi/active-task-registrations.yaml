@@ -10,6 +10,7 @@ get:
       required: true
       schema:
         type: string
+        format: "date"
     - name: "duration"
       description: "The duration type to use when deciding which time period tasks are considered active"
       in: query
@@ -20,7 +21,11 @@ get:
           - day # Only get tasks for the specified date
           - week # Get the tasks for the whole week (mon-sun) of the specified date
           - month # Get the tasks for the whole month of the specified date
-          # TODO: Figure out how to nicely display the three comments above as documentation
+        description: >
+          Valid values:
+          * `day` - Only get tasks for the specified date
+          * `week` - Get the tasks for the whole week (Monday through Sunday) of the specified date
+          * `month` - Get the tasks for the whole month of the specified date
   responses:
     "200":
       description: "List of time registrations for the user"
