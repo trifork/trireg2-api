@@ -1,18 +1,12 @@
-type: "object"
-properties:
-  message:
-    type: "string"
-    description: "Small status message describing the result of the import request"
-  registrations:
-    type: "array"
-    items:
-      required: ["timeRegistrationId", "status"]
-      properties:
-        registrationId:
-          type: "string"
-        status:
-          type: "string"
-          description: "Describes the status of the registration (SUCCESS, PENDING, FAILED)"
-        message:
-          description: "When status = FAILED, this will provide a description of the problem"
-          type: "string"
+type: "array"
+items:
+  required: ["timeRegistrationId", "status"]
+  properties:
+    timeRegistrationId:
+      type: "string"
+    status:
+      type: "string"
+      description: "Describes the status of the registration (SUCCESS, PENDING, FAILED)"
+    message:
+      description: "When status = FAILED, this will provide a description of the problem"
+      type: "string"
