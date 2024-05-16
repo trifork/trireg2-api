@@ -1,0 +1,32 @@
+post:
+  tags:
+    - "Time registration"
+  operationId: "addBulkTimeRegistrationForUser"
+  description: "Registers several timeentries for a user"
+  requestBody:
+    description: "A JSON object containing a list of time registration information"
+    required: true
+    content:
+      application/json:
+        schema:
+          type: "array"
+          items:
+            $ref: "./schemas/TimeRegistrationRequest.yaml"
+  responses:
+    "201":
+      description: "Created"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+          examples:
+            Example#1:
+              value: "Time registered successfully"
+    "400":
+      description: "Failed creating one or more registrations"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+    "401":
+      $ref: "./responses/UnauthorizedError.yaml"
