@@ -2,7 +2,7 @@ post:
   tags:
     - "Time registration"
   operationId: "addBulkTimeRegistrationForUser"
-  description: "Registers several timeentries for a user"
+  description: "Registers several time registrations for a user"
   requestBody:
     description: "A JSON object containing a list of time registration information"
     required: true
