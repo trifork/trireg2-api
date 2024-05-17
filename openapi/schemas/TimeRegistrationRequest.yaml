@@ -9,5 +9,8 @@ properties:
   duration:
     $ref: Duration.yaml
   tags:
-    $ref: Tag.yaml
+    type: array
+    items:
+      $ref: Tag.yaml
+    
    

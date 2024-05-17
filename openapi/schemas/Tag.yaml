@@ -1,8 +1,7 @@
-type: "array"
-items:
-  required: ["tagConfigurationId"]
-  properties:
-    tagConfigurationId:
-      type: "string"
-    value:
-      type: "string"
+type: object
+required: ["tagConfigurationId"]
+properties:
+  tagConfigurationId:
+    type: "string"
+  value:
+    type: "string"
