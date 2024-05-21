@@ -1,0 +1,29 @@
+type: array
+items:
+  type: object
+  properties:
+    taskId:
+      type: string
+    taskName:
+      type: string
+    taskDescription:
+      type: string
+    timeRegistrations:
+      type: array
+      items:
+        type: "object"
+        required: [ "timeRegistrationId", "registered", "date", "duration", "status" ]
+        properties:
+          timeRegistrationId:
+            type: "string"
+          registered:
+            type: "integer"
+            format: "int64"
+            description: "The registration time as Unix milliseconds timestamp"
+          date:
+            type: "string"
+            format: "date"
+          duration:
+            $ref: Duration.yaml
+          status:
+            type: "string"
