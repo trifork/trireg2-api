@@ -10,6 +10,8 @@ paths:
     $ref: login.yaml
   /time-registration:
     $ref: time-registration.yaml
+  /time-registration/bulk:
+    $ref: time-registration-bulk.yaml
   /export:
     $ref: export.yaml
   /tag:
