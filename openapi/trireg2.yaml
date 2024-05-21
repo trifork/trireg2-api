@@ -5,28 +5,30 @@ info:
   version: "0.1.2"
   contact:
     name: "TBD"
+    email: "TBD"
+    url: "https://github.com/trifork/trireg2-api"
   license:
     name: "TBD"
     url: "TBD"
 servers:
 - url: "http://0.0.0.0:8080"
 tags:
-  - name: "Time registration"
-    description: "Tag for CRUD operations related to time registrations"
+  - name: "Export"
+    description: "Tag for operations related to exporting time registrations to an external system"
+  - name: "Import"
+    description: "Tag for operations related to importing time registrations"
+  - name: "Login"
+    description: "Tag for operations related to logging into the service through a browser"
   - name: "TagConfigurations"
     description: "Tag for CRUD operations related to the configuration of tags"
-  - name: "Tasks"
-    description: "Tag for CRUD operations related to the configuration tasks"
   - name: "TagTaskMapping"
     description: "Tag for CRUD operations related to the configuration of the relation between tasks and tag configurations"
   - name: "Tagging"
     description: "Tag for CRUD operations related to tagging time registrations"
-  - name: "Import"
-    description: "Tag for operations related to importing time registrations"
-  - name: "Export"
-    description: "Tag for operations related to exporting time registrations to an external system"
-  - name: "Login"
-    description: "Tag for operations related to logging into the service through a browser"
+  - name: "Tasks"
+    description: "Tag for CRUD operations related to the configuration tasks"
+  - name: "Time registration"
+    description: "Tag for CRUD operations related to time registrations"
 paths:
   /login:
     $ref: login.yaml
