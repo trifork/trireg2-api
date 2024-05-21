@@ -13,7 +13,7 @@ servers:
 tags:
   - name: "Time registration"
     description: "Tag for CRUD operations related to time registrations"
-  - name: "TagConfiguration"
+  - name: "TagConfigurations"
     description: "Tag for CRUD operations related to the configuration of tags"
   - name: "Tasks"
     description: "Tag for CRUD operations related to the configuration tasks"
