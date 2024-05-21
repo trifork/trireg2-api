@@ -1,7 +1,7 @@
 get:
   tags:
     - "Time registration"
-  operationId: "getTimeRegistrationsByActiveTaskForUser"
+  operationId: "getTaskTimeRegistrationsOverview"
   description: "Returns time registrations for a user grouped by task"
   parameters:
     - name: "date"
@@ -32,7 +32,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "./schemas/GetTimeRegistrationsByTaskRequest.yaml"
+            $ref: "./schemas/TimeRegistrationsByTaskResponse.yaml"
     "400":
       description: "Request contains an invalid period value"
       content:
