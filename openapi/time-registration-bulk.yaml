@@ -23,7 +23,7 @@ post:
             Example#1:
               value: "Time registered successfully"
     "400":
-      description: "Failed creating one or more registrations"
+      description: "Failed creating one or more time registrations - if one time registration failed, no time registration is saved"
       content:
         text/plain:
           schema:
