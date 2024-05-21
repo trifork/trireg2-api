@@ -12,6 +12,8 @@ paths:
     $ref: time-registration.yaml
   /time-registration/active-task:
     $ref: active-task-registrations.yaml
+  /time-registration/bulk:
+    $ref: time-registration-bulk.yaml
   /export:
     $ref: export.yaml
   /tag:
