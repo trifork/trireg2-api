@@ -2,9 +2,33 @@ openapi: "3.0.3"
 info:
   title: "TriReg2 API"
   description: "An OpenAPI specification for time registrations"
-  version: "0.1.1"
+  version: "0.1.2"
+  contact:
+    name: "TBD"
+    email: "placeholder@trifork.com"
+    url: "https://github.com/trifork/trireg2-api"
+  license:
+    name: "TBD"
+    url: "TBD"
 servers:
 - url: "http://0.0.0.0:8080"
+tags:
+  - name: "Export"
+    description: "Tag for operations related to exporting time registrations to an external system"
+  - name: "Import"
+    description: "Tag for operations related to importing time registrations"
+  - name: "Login"
+    description: "Tag for operations related to logging into the service through a browser"
+  - name: "TagConfigurations"
+    description: "Tag for CRUD operations related to the configuration of tags"
+  - name: "TagTaskMapping"
+    description: "Tag for CRUD operations related to the configuration of the relation between tasks and tag configurations"
+  - name: "Tagging"
+    description: "Tag for CRUD operations related to tagging time registrations"
+  - name: "Tasks"
+    description: "Tag for CRUD operations related to the configuration tasks"
+  - name: "Time registration"
+    description: "Tag for CRUD operations related to time registrations"
 paths:
   /login:
     $ref: login.yaml
@@ -34,12 +58,6 @@ components:
     basicAuth:
       type: http
       scheme: basic
-  schemas:
-    TimeRegistrationRequest:
-      $ref: "./schemas/TimeRegistrationRequest.yaml"
-    TimeRegistrationResponse:
-      $ref: "./schemas/TimeRegistrationResponse.yaml"
 security:
-- openId:
-  - openid
+- openId: []
 - basicAuth: []
