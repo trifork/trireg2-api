@@ -8,8 +8,8 @@ info:
     email: "placeholder@trifork.com"
     url: "https://github.com/trifork/trireg2-api"
   license:
-    name: "TBD"
-    url: "TBD"
+    name: "No License"
+    url: "https://github.com/trifork/trireg2-api"
 servers:
 - url: "http://0.0.0.0:8080"
 tags:
