@@ -11,7 +11,10 @@ info:
     name: "No License"
     url: "https://github.com/trifork/trireg2-api"
 servers:
-- url: "http://0.0.0.0:8080"
+  - url: https://trireg2.tcs.trifork.dev
+    description: Test server (uses test data)
+  - url: "http://0.0.0.0:8080"
+    description: Local development server
 tags:
   - name: "Export"
     description: "Tag for operations related to exporting time registrations to an external system"
