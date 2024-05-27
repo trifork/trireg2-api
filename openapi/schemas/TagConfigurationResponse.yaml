@@ -3,7 +3,8 @@ items:
   required: ["tagConfigurationId", "tagConfigurationName", "tagDescription", "tagValueType", "tagTaskRelation"]
   properties:
     tagConfigurationId:
-      type: "string"
+      type: "integer"
+      format: "int64"
     tagConfigurationName:
       type: "string"
       description: "The name of the tag configuration"

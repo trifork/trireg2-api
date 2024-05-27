@@ -3,7 +3,8 @@ items:
   type: object
   properties:
     taskId:
-      type: string
+      type: "integer"
+      format: "int64"
     taskName:
       type: string
     taskDescription:
@@ -15,7 +16,8 @@ items:
         required: [ "timeRegistrationId", "registered", "date", "duration", "status" ]
         properties:
           timeRegistrationId:
-            type: "string"
+            type: "integer"
+            format: "int64"
           registered:
             type: "integer"
             format: "int64"

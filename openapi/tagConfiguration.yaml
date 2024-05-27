@@ -9,7 +9,8 @@ get:
       description: "The id of the task to get applicable tag configurations for"
       required: true
       schema:
-        type: "string"
+        type: "integer"
+        format: "int64"
     - name: "includeHidden"
       in: "query"
       description: "Include tags that are normally hidden and automatically added when registering time on the task"
@@ -64,7 +65,8 @@ put:
       description: "The id of the tag configuration to update"
       required: true
       schema:
-        type: "string"
+        type: "integer"
+        format: "int64"
   requestBody:
     required: true
     content:

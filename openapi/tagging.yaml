@@ -7,7 +7,8 @@ get:
     - in: query
       name: "timeRegistrationId"
       schema:
-        type: "string"
+        type: "integer"
+        format: "int64"
       required: true
       description: "The ID of the registration to get tags for"
   responses:
@@ -67,7 +68,8 @@ put:
           required: ["tagId", "value"]
           properties:
             tagId:
-              type: "string"
+              type: "integer"
+              format: "int64"
             value:
               type: "string"
   responses:
@@ -92,7 +94,8 @@ delete:
     - in: query
       name: "tagId"
       schema:
-        type: "string"
+        type: "integer"
+        format: "int64"
       required: true
       description: "The ID of the tag to delete"
   responses:

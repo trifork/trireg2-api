@@ -2,7 +2,8 @@ type: "object"
 required: ["taskId", "date", "duration"]
 properties:
   taskId:
-    type: "string"
+    type: "integer"
+    format: "int64"
   date:
     type: "string"
     format: "date"
