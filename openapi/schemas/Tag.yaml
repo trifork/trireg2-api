@@ -2,6 +2,7 @@ type: object
 required: ["tagConfigurationId"]
 properties:
   tagConfigurationId:
-    type: "string"
+    type: "integer"
+    format: "int64"
   value:
     type: "string"

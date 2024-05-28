@@ -2,15 +2,18 @@ type: "object"
 required: ["timeRegistrationId", "registered", "userId", "taskId", "date", "duration", "status"]
 properties:
   timeRegistrationId:
-    type: "string"
+    type: "integer"
+    format: "int64"
   registered:
     type: "integer"
     format: "int64"
     description: "The registration time as Unix milliseconds timestamp"
   userId:
-    type: "string"
+    type: "integer"
+    format: "int64"
   taskId:
-    type: "string"
+    type: "integer"
+    format: "int64"
   date:
     type: "string"
     format: "date"

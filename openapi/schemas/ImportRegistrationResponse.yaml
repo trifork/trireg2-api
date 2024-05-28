@@ -3,7 +3,8 @@ items:
   required: ["timeRegistrationId", "status"]
   properties:
     timeRegistrationId:
-      type: "string"
+      type: "integer"
+      format: "int64"
     status:
       type: "string"
       description: "Describes the status of the registration (SUCCESS, PENDING, FAILED)"

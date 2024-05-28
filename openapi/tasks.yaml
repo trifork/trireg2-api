@@ -9,7 +9,8 @@ get:
       description: "The id of the user to get tasks for (Default is user logged in)"
       required: false
       schema:
-        type: "string"
+        type: "integer"
+        format: "int64"
   responses:
     "200":
       description: "Successfully fetched list of tasks"
@@ -59,7 +60,8 @@ put:
       description: "The id of the task to update"
       required: true
       schema:
-        type: "string"
+        type: "integer"
+        format: "int64"
   requestBody:
     required: true
     content:
