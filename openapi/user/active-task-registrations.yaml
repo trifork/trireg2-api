@@ -32,7 +32,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "./schemas/user/TimeRegistrationsByTaskResponse.yaml"
+            $ref: "../schemas/user/TimeRegistrationsByTaskResponse.yaml"
     "400":
       description: "Request contains an invalid time period value"
       content:

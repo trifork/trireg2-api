@@ -9,14 +9,14 @@ post:
     content:
       application/json:
         schema:
-          $ref: "./schemas/user/ImportRegistrationRequest.yaml"
+          $ref: "../schemas/user/ImportRegistrationRequest.yaml"
   responses:
     "200":
       description: "OK"
       content:
         application/json:
           schema:
-            $ref: "./schemas/user/ImportRegistrationResponse.yaml"
+            $ref: "../schemas/user/ImportRegistrationResponse.yaml"
     "401":
       $ref: "../responses/UnauthorizedError.yaml"
     "502":

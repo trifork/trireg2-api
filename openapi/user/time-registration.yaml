@@ -11,9 +11,9 @@ get:
           schema:
             type: array
             items:
-              $ref: "./schemas/user/TimeRegistrationResponse.yaml"
+              $ref: "../schemas/user/TimeRegistrationResponse.yaml"
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"
 post:
   tags:
   - "Time registration"
@@ -25,7 +25,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: "./schemas/user/TimeRegistrationRequest.yaml"
+          $ref: "../schemas/user/TimeRegistrationRequest.yaml"
   responses:
     "201":
       description: "Created"
@@ -37,7 +37,7 @@ post:
             Example#1:
               value: "Time registration added successfully"
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"
 put:
   tags:
     - "Time registration"
