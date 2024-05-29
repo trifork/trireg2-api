@@ -56,7 +56,7 @@ put:
     content:
       application/json:
         schema:
-          $ref: "./schemas/user/TimeRegistrationUpdateRequest.yaml"
+          $ref: "../schemas/user/TimeRegistrationUpdateRequest.yaml"
   responses:
     "200":
       description: "Updated"
@@ -74,7 +74,7 @@ put:
           schema:
             type: "string"
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"
     "404":
       description: "Time registration not found"
       content:

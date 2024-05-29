@@ -17,9 +17,9 @@ get:
       content:
         application/json:
           schema:
-            $ref: "./schemas/admin/TaskCreateResponse.yaml"
+            $ref: "../schemas/admin/TaskCreateResponse.yaml"
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"
 post:
   tags:
     - "Task"
@@ -30,7 +30,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: "./schemas/admin/TaskCreateRequest.yaml"
+          $ref: "../schemas/admin/TaskCreateRequest.yaml"
   responses:
     "200":
       description: "Successfully created the new task"
@@ -48,7 +48,7 @@ post:
           schema:
             type: "string"
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"
 put:
   tags:
     - "Task"
@@ -67,7 +67,7 @@ put:
     content:
       application/json:
         schema:
-          $ref: "./schemas/admin/TaskUpdateRequest.yaml"
+          $ref: "../schemas/admin/TaskUpdateRequest.yaml"
   responses:
     "200":
       description: "Successfully updated the task"
@@ -85,7 +85,7 @@ put:
           schema:
             type: "string"
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"
     "404":
       description: "The specified task was not found"
       content:

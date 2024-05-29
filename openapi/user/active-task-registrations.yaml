@@ -40,4 +40,4 @@ get:
           schema:
             type: string
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"

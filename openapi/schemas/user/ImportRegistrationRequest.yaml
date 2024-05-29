@@ -16,4 +16,4 @@ items:
     tags:
       type: array
       items:
-        $ref: Tag.yaml
+        $ref: TagConfiguration.yaml

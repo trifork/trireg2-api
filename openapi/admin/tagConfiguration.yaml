@@ -38,7 +38,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: "./schemas/admin/TagConfigurationCreateRequest.yaml"
+          $ref: "../schemas/admin/TagConfigurationCreateRequest.yaml"
   responses:
     "200":
       description: "The tag configuration was successfully created"
@@ -53,7 +53,7 @@ post:
           schema:
             type: "string"
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"
 put:
   tags:
     - "TagConfigurations"
@@ -72,7 +72,7 @@ put:
     content:
       application/json:
         schema:
-          $ref: "./schemas/admin/TagConfigurationUpdateRequest.yaml"
+          $ref: "../schemas/admin/TagConfigurationUpdateRequest.yaml"
   responses:
     "200":
       description: "The tag configuration was successfully updated"
@@ -87,7 +87,7 @@ put:
           schema:
             type: "string"
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"
     "404":
       description: "The specified task configuration was not found"
       content:

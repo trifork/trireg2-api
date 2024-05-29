@@ -11,7 +11,7 @@ post:
         schema:
           type: "array"
           items:
-            $ref: "./schemas/user/TimeRegistrationRequest.yaml"
+            $ref: "../schemas/user/TimeRegistrationRequest.yaml"
   responses:
     "201":
       description: "Created"
@@ -21,7 +21,7 @@ post:
             type: "string"
           examples:
             Example#1:
-              value: "Time registered successfully"
+              value: "Time registrations added successfully"
     "400":
       description: "Failed creating one or more time registrations - if one time registration failed, no time registration is saved"
       content:
@@ -29,4 +29,4 @@ post:
           schema:
             type: "string"
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"
