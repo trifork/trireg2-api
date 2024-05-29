@@ -1,6 +1,6 @@
 get:
   tags:
-    - "Tagging"
+    - "User"
   operationId: "getRegistrationTags"
   description: "Gets the tags associated with the given time registration"
   parameters:
@@ -27,7 +27,7 @@ get:
       $ref: "./responses/BadGateway.yaml"
 post:
   tags:
-    - "Tagging"
+    - "User"
   operationId: "tagRegistration"
   description: "Tags a time registration with specified tag and optional tag value"
   requestBody:
@@ -54,7 +54,7 @@ post:
       $ref: "./responses/BadGateway.yaml"
 put:
   tags:
-    - "Tagging"
+    - "User"
   operationId: "updateTagRegistration"
   description: "Updates a tag that was added to a time registration"
   requestBody:
@@ -85,7 +85,7 @@ put:
       description: "The specified tag was not found"
 delete:
   tags:
-    - "Tagging"
+    - "User"
   operationId: "deleteTagRegistration"
   description: "Deletes a tag that was added to a time registration"
   parameters:

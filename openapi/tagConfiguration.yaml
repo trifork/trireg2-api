@@ -1,6 +1,6 @@
 get:
   tags:
-    - "TagConfigurations"
+    - "Admin"
   operationId: "getTagConfigurations"
   description: "Gets all tag configurations that are applicable to the provided task"
   parameters:
@@ -29,7 +29,7 @@ get:
       description: "Unable to find tag configurations for the specified task (No task with specified taskId exists)"
 post:
   tags:
-    - "TagConfigurations"
+    - "Admin"
   operationId: "createTagConfiguration"
   description: "Creates a new tag configuration"
   requestBody:
@@ -55,7 +55,7 @@ post:
       $ref: "./responses/UnauthorizedError.yaml"
 put:
   tags:
-    - "TagConfigurations"
+    - "Admin"
   operationId: "updateTagConfiguration"
   description: "Updates an existing tag configuration"
   parameters:

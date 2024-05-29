@@ -1,6 +1,6 @@
 post:
   tags:
-    - "Export"
+    - "User"
   operationId: "exportTimeRegistrationsForUser"
   description: "Exports time registrations for the logged in user for a specific date range"
   parameters:

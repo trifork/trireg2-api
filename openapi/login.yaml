@@ -1,8 +1,8 @@
 get:
   tags:
-    - "Login"
+    - "User"
   operationId: "login"
-  description: "Redirects to OpenId login flow"
+  description: "Redirects to OpenId login flow. Should only be used for web clients"
   responses:
     "302":
       description: "Redirection to a login flow for the OpenId login provider. After completing the flow, the user will be redirected back to the application with a valid session token."

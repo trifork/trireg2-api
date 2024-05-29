@@ -1,6 +1,6 @@
 get:
   tags:
-    - "Tasks"
+    - "User"
   operationId: "getTasksForUser"
   description: "Gets the tasks available to the user"
   parameters:
@@ -21,7 +21,7 @@ get:
       $ref: "./responses/UnauthorizedError.yaml"
 post:
   tags:
-    - "Tasks"
+    - "User"
   operationId: "createNewTask"
   description: "Create a new task"
   requestBody:

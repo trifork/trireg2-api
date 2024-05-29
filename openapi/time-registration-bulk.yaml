@@ -1,6 +1,6 @@
 post:
   tags:
-    - "Time registration"
+    - "User"
   operationId: "addBulkTimeRegistrationForUser"
   description: "Registers several time registrations for a user"
   requestBody:

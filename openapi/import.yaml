@@ -1,6 +1,6 @@
 post:
   tags:
-  - "Import"
+  - "User"
   operationId: "importTimeRegistrations"
   description: "Imports the given time registrations into the system"
   requestBody:

@@ -1,6 +1,6 @@
 get:
   tags:
-    - "Time registration"
+    - "User"
   operationId: "getTaskTimeRegistrationsOverview"
   description: "Returns time registrations for a user grouped by task"
   parameters:
