@@ -19,7 +19,7 @@ get:
           schema:
             type: array
             items:
-              $ref: "../schemas/user/TagTimeRegistrationResponse.yaml"
+              $ref: "../schemas/admin/TagTimeRegistrationResponse.yaml"
     "401":
       $ref: "../responses/UnauthorizedError.yaml"
     "404":
@@ -37,7 +37,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: "../schemas/user/TagTimeRegistrationRequest.yaml"
+          $ref: "../schemas/admin/TagTimeRegistrationRequest.yaml"
   responses:
     "200":
       description: "Tag was successfully added to the time registration"
