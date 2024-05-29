@@ -2,7 +2,7 @@ post:
   tags:
     - "Time registration"
   operationId: "addBulkTimeRegistrationForUser"
-  description: "Registers several time registrations for a user"
+  description: "Add several time registrations for a user"
   requestBody:
     description: "A JSON object containing a list of time registration information"
     required: true
@@ -11,7 +11,7 @@ post:
         schema:
           type: "array"
           items:
-            $ref: "./schemas/TimeRegistrationRequest.yaml"
+            $ref: "./schemas/user/TimeRegistrationRequest.yaml"
   responses:
     "201":
       description: "Created"

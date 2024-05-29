@@ -21,11 +21,11 @@ items:
           registered:
             type: "integer"
             format: "int64"
-            description: "The registration time as Unix milliseconds timestamp"
+            description: "The registered time value as Unix milliseconds timestamp"
           date:
             type: "string"
             format: "date"
           duration:
-            $ref: Duration.yaml
+            $ref: ../Duration.yaml
           status:
             type: "string"

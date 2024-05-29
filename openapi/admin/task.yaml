@@ -1,28 +1,28 @@
 get:
   tags:
-    - "Tasks"
+    - "Task"
   operationId: "getTasksForUser"
-  description: "Gets the tasks available to the user"
+  description: "Gets the tasks available for the user"
   parameters:
     - name: "userId"
       in: "query"
-      description: "The id of the user to get tasks for (Default is user logged in)"
+      description: "The id of the user to get tasks for (Default is the user logged in)"
       required: false
       schema:
         type: "integer"
         format: "int64"
   responses:
     "200":
-      description: "Successfully fetched list of tasks"
+      description: "Successfully fetched the list of tasks available"
       content:
         application/json:
           schema:
-            $ref: "./schemas/TaskCreateResponse.yaml"
+            $ref: "./schemas/admin/TaskCreateResponse.yaml"
     "401":
       $ref: "./responses/UnauthorizedError.yaml"
 post:
   tags:
-    - "Tasks"
+    - "Task"
   operationId: "createNewTask"
   description: "Create a new task"
   requestBody:
@@ -33,16 +33,16 @@ post:
           $ref: "./schemas/admin/TaskCreateRequest.yaml"
   responses:
     "200":
-      description: "Successfully created the task"
+      description: "Successfully created the new task"
       content:
         text/plain:
           schema:
             type: "string"
           examples:
             Success:
-              value: "Successfully created task"
+              value: "Successfully created the new task"
     "400":
-      description: "Request contains invalid data and the task was not created"
+      description: "Request contains invalid data. The task was not created"
       content:
         text/plain:
           schema:
@@ -51,7 +51,7 @@ post:
       $ref: "./responses/UnauthorizedError.yaml"
 put:
   tags:
-    - "Tasks"
+    - "Task"
   operationId: "updateTask"
   description: "Updates an existing task"
   parameters:
@@ -77,9 +77,9 @@ put:
             type: "string"
           examples:
             Success:
-              value: "Successfully updated task"
+              value: "Successfully updated the task"
     "400":
-      description: "Request contains invalid data and the task was not updated"
+      description: "Request contains invalid data. The task was not updated"
       content:
         text/plain:
           schema:

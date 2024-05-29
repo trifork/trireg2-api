@@ -4,6 +4,6 @@ properties:
     type: "string"
     format: "date"
   duration:
-    $ref: Duration.yaml
+    $ref: ../Duration.yaml
   status:
     type: "string"

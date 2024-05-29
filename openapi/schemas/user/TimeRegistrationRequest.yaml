@@ -8,10 +8,10 @@ properties:
     type: "string"
     format: "date"
   duration:
-    $ref: Duration.yaml
+    $ref: ../Duration.yaml
   tags:
     type: array
     items:
-      $ref: Tag.yaml
+      $ref: TagConfiguration.yaml
     
    

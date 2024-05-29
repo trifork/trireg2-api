@@ -1,7 +1,7 @@
 openapi: "3.0.3"
 info:
-  title: "TriReg2 API"
-  description: "An OpenAPI specification for time registrations"
+  title: "TriReg2 User API"
+  description: "An OpenAPI specification for time registrations to be used by a user"
   version: "0.1.2"
   contact:
     name: "TBD"
@@ -21,38 +21,26 @@ tags:
   - name: "Import"
     description: "Tag for operations related to importing time registrations"
   - name: "Login"
-    description: "Tag for operations related to logging into the service through a browser"
-  - name: "TagConfigurations"
-    description: "Tag for CRUD operations related to the configuration of tags"
-  - name: "TagTaskMapping"
-    description: "Tag for CRUD operations related to the configuration of the relation between tasks and tag configurations"
-  - name: "Tagging"
-    description: "Tag for CRUD operations related to tagging time registrations"
-  - name: "Tasks"
-    description: "Tag for CRUD operations related to the configuration tasks"
+    description: "Tag for operations related to logging into the service through a web browser"
+  - name: "Tag"
+    description: "Tag for CRUD operations related to adding tags to time registrations"
   - name: "Time registration"
     description: "Tag for CRUD operations related to time registrations"
 paths:
   /login:
-    $ref: login.yaml
+    $ref: user/login.yaml
   /time-registration:
-    $ref: time-registration.yaml
+    $ref: user/time-registration.yaml
   /time-registration/active-task:
-    $ref: active-task-registrations.yaml
+    $ref: user/active-task-registrations.yaml
   /time-registration/bulk:
-    $ref: time-registration-bulk.yaml
+    $ref: user/time-registration-bulk.yaml
   /export:
-    $ref: export.yaml
+    $ref: user/export.yaml
   /tag:
-    $ref: tagging.yaml
+    $ref: user/tag.yaml
   /import:
-    $ref: import.yaml
-  /task:
-    $ref: tasks.yaml
-  /config/tag:
-    $ref: tagConfiguration.yaml
-  /config/task-tag:
-    $ref: tagTaskMapping.yaml
+    $ref: user/import.yaml
 components:
   securitySchemes:
     openId:

@@ -8,4 +8,4 @@ properties:
     description: "A description of the tag configuration"
   tagConfigurationValueType:
     type: "string"
-    description: "Describes the value type of the tag."
+    description: "Describes the value type of the tag"

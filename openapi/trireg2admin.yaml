@@ -1,0 +1,42 @@
+openapi: "3.0.3"
+info:
+  title: "TriReg2 Admin API"
+  description: "An OpenAPI specification for time registrations to be used by an administrator"
+  version: "0.1.3"
+  contact:
+    name: "TBD"
+    email: "placeholder@trifork.com"
+    url: "https://github.com/trifork/trireg2-api"
+  license:
+    name: "No License"
+    url: "https://github.com/trifork/trireg2-api"
+servers:
+  - url: https://trireg2.tcs.trifork.dev
+    description: Test server (uses test data)
+  - url: "http://0.0.0.0:8080"
+    description: Local development server
+tags:
+  - name: "Task"
+    description: "Tag for CRUD operations related to the configuration of tasks"
+  - name: "TagConfiguration"
+    description: "Tag for CRUD operations related to the configuration of tags"
+  - name: "TagTaskMapping"
+    description: "Tag for CRUD operations related to the configuration of the relation between tasks and tag configurations"
+paths:
+  /task:
+    $ref: admin/task.yaml
+  /config/tag:
+    $ref: admin/tagConfiguration.yaml
+  /config/task-tag:
+    $ref: admin/tagTaskMapping.yaml
+components:
+  securitySchemes:
+    openId:
+      type: openIdConnect
+      openIdConnectUrl: https://oidc.hosted.trifork.com/auth/realms/trifork/.well-known/openid-configuration
+    basicAuth:
+      type: http
+      scheme: basic
+security:
+- openId: []
+- basicAuth: []

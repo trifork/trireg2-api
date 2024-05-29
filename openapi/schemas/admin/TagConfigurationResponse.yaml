@@ -13,10 +13,10 @@ items:
       description: "A description of the tag configuration"
     tagValueType:
       type: "string"
-      description: "Describes the value type of the tag."
+      description: "Describes the value type of the tag"
     tagDefaultValue:
       type: "string"
-      description: "The default value to use when no other value is specified when tagging a time registration"
+      description: "The default value to use when no other value is specified when adding a tag to a time registration"
     tagTaskRelation:
       type: "string"
       description: "Specifies the relation to the task. For example, whether the tag is optional or mandatory"

@@ -9,7 +9,7 @@ properties:
     format: "int64"
   relation:
     type: "string"
-    description: "The type of relation between the task and tag."
+    description: "The type of relation between the task and tag"
     enum:
       - "optional"
       - "mandatory"
