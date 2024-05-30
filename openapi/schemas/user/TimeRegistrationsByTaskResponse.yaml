@@ -28,4 +28,4 @@ items:
           duration:
             $ref: ../Duration.yaml
           status:
-            type: "string"
+            $ref: ../Status.yaml

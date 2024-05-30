@@ -48,7 +48,7 @@ post:
     "401":
       $ref: "../responses/UnauthorizedError.yaml"
     "400":
-      description: "Tag was not added to the registration due to an error with the request"
+      description: "Tag was not added to the time registration due to an error with the request"
     "404":
       description: "No time registration was found to tag"
     "502":
