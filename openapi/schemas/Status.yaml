@@ -1,8 +1,6 @@
 type: "string"
-nullable: true
 description: "Describes the status of the time registration"
 enum:
   - pending
   - valid
   - invalid
-  - null
