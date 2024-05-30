@@ -1,6 +1,6 @@
 type: "string"
 description: "Describes the status of the time registration"
 enum:
-  - pending
-  - valid
-  - invalid
+  - "pending"
+  - "valid"
+  - "invalid"
