@@ -20,5 +20,4 @@ properties:
   duration:
     $ref: ../Duration.yaml
   status:
-    type: "string"
-    #$ref: ../Status.yaml
+    $ref: ../Status.yaml
