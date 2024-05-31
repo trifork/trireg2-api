@@ -20,9 +20,14 @@ properties:
   duration:
     $ref: ../Duration.yaml
   status:
-    type: "string"
-    description: "Describes the status of the time registration"
-    enum:
-      - "PENDING"
-      - "VALID"
-      - "INVALID"
+    $ref: '#/components/schemas/Status'
+
+components:
+  schemas:
+    Status:
+      description: "Describes the status of the time registration"
+      type: string
+      enum:
+        - "PENDING"
+        - "VALID"
+        - "INVALID"      
