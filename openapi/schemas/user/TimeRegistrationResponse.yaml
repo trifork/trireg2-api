@@ -20,7 +20,7 @@ properties:
   duration:
     $ref: ../Duration.yaml
   status:
-    $ref: '#/components/schemas/Status'
+    $ref: "#/components/schemas/Status"
 
 components:
   schemas:
