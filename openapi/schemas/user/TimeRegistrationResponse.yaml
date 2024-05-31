@@ -18,6 +18,11 @@ properties:
     type: "string"
     format: "date"
   duration:
-    $ref: "#/openapi/schemas/Duration.yaml"
+    $ref: ..Duration.yaml
   status:
-    $ref: "#/openapi/schemas/Status.yaml"
+    type: "string"
+    description: "Describes the status of the time registration"
+    enum:
+      - "PENDING"
+      - "VALID"
+      - "INVALID"

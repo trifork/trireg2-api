@@ -29,4 +29,8 @@ items:
             $ref: ../Duration.yaml
           status:
             type: "string"
-            #$ref: ../Status.yaml
+            description: "Describes the status of the time registration"
+            enum:
+              - "PENDING"
+              - "VALID"
+              - "INVALID"
