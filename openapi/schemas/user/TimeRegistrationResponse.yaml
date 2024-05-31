@@ -18,6 +18,6 @@ properties:
     type: "string"
     format: "date"
   duration:
-    $ref: "#/schemas/Duration.yaml"
+    $ref: "#/openapi/schemas/Duration.yaml"
   status:
-    $ref: "#/schemas/Status.yaml"
+    $ref: "#/openapi/schemas/Status.yaml"
