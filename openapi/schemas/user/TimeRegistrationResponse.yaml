@@ -18,7 +18,7 @@ properties:
     type: "string"
     format: "date"
   duration:
-    $ref: ..Duration.yaml
+    $ref: ../Duration.yaml
   status:
     type: "string"
     description: "Describes the status of the time registration"
