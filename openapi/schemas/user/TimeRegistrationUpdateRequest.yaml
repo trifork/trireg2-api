@@ -6,4 +6,5 @@ properties:
   duration:
     $ref: ../Duration.yaml
   status:
-    $ref: ../Status.yaml
+    description: "Describes the status of the time registration (PENDING, VALID, INVALID)"
+    type: string
