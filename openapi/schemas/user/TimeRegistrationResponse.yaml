@@ -18,13 +18,6 @@ properties:
     type: "string"
     format: "date"
   duration:
-    $ref: ../Duration.yaml
+    $ref: "#/schemas/Duration.yaml"
   status:
-    type: "string"
-    description: "Describes the status of the time registration"
-    nullable: true
-    enum:
-      - "PENDING"
-      - "VALID"
-      - "INVALID"
-      - null
+    $ref: "#/schemas/Status.yaml"
