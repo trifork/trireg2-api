@@ -56,7 +56,7 @@ post:
       $ref: "../responses/UnauthorizedError.yaml"
 put:
   tags:
-    - "TagConfigurations"
+    - "TagConfiguration"
   operationId: "updateTagConfiguration"
   description: "Updates an existing tag configuration"
   parameters:
