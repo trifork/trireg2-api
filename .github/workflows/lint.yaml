@@ -16,4 +16,4 @@ jobs:
        # Run Spectral and lint the OpenAPI file(s)
        - uses: stoplightio/spectral-action@latest
          with:
-           file_glob: "openapi/trireg2.yaml"
+           file_glob: "openapi/*.yaml"
