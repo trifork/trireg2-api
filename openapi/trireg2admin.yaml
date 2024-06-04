@@ -16,12 +16,12 @@ servers:
   - url: "http://0.0.0.0:8080"
     description: Local development server
 tags:
-  - name: "Task"
-    description: "Tag for CRUD operations related to the configuration of tasks"
   - name: "TagConfiguration"
     description: "Tag for CRUD operations related to the configuration of tags"
   - name: "TagTaskMapping"
     description: "Tag for CRUD operations related to the configuration of the relation between tasks and tag configurations"
+  - name: "Task"
+    description: "Tag for CRUD operations related to the configuration of tasks"  
 paths:
   /task:
     $ref: admin/task.yaml
