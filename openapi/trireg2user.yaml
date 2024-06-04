@@ -24,7 +24,7 @@ tags:
     description: "Tag for operations related to logging into the service through a web browser"
   - name: "Tag"
     description: "Tag for CRUD operations related to adding tags to time registrations"
-  - name: "Time registration"
+  - name: "TimeRegistration"
     description: "Tag for CRUD operations related to time registrations"
 paths:
   /login:

@@ -1,6 +1,6 @@
 get:
   tags:
-  - "Time registration"
+  - "TimeRegistration"
   operationId: "getTimeRegistrationsForUser"
   description: "Returns time registrations that belongs to a user"
   responses:
@@ -16,7 +16,7 @@ get:
       $ref: "../responses/UnauthorizedError.yaml"
 post:
   tags:
-  - "Time registration"
+  - "TimeRegistration"
   operationId: "addTimeRegistrationForUser"
   description: "Adds a time registration for a user"
   requestBody:
@@ -40,7 +40,7 @@ post:
       $ref: "../responses/UnauthorizedError.yaml"
 put:
   tags:
-    - "Time registration"
+    - "TimeRegistration"
   operationId: "updateTimeRegistrationForUser"
   description: "Updates the specified time registration"
   parameters:
