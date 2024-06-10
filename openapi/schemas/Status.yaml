@@ -1,0 +1,8 @@
+type: "string"
+description: "Describes the status of the time registration"
+nullable: true
+enum:
+  - "PENDING"
+  - "VALID"
+  - "INVALID"
+  - null

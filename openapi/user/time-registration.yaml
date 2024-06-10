@@ -1,8 +1,8 @@
 get:
   tags:
-  - "Time registration"
+  - "TimeRegistration"
   operationId: "getTimeRegistrationsForUser"
-  description: "Returns time registrations for a user"
+  description: "Returns time registrations that belongs to a user"
   responses:
     "200":
       description: "List of time registrations for the user"
@@ -11,21 +11,21 @@ get:
           schema:
             type: array
             items:
-              $ref: "./schemas/TimeRegistrationResponse.yaml"
+              $ref: "../schemas/user/TimeRegistrationResponse.yaml"
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"
 post:
   tags:
-  - "Time registration"
+  - "TimeRegistration"
   operationId: "addTimeRegistrationForUser"
-  description: "Registers time for a user"
+  description: "Adds a time registration for a user"
   requestBody:
     description: "A JSON object containing time registration information"
     required: true
     content:
       application/json:
         schema:
-          $ref: "./schemas/TimeRegistrationRequest.yaml"
+          $ref: "../schemas/user/TimeRegistrationRequest.yaml"
   responses:
     "201":
       description: "Created"
@@ -35,12 +35,12 @@ post:
             type: "string"
           examples:
             Example#1:
-              value: "Time registered successfully"
+              value: "Time registration added successfully"
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"
 put:
   tags:
-    - "Time registration"
+    - "TimeRegistration"
   operationId: "updateTimeRegistrationForUser"
   description: "Updates the specified time registration"
   parameters:
@@ -56,7 +56,7 @@ put:
     content:
       application/json:
         schema:
-          $ref: "./schemas/TimeRegistrationUpdateRequest.yaml"
+          $ref: "../schemas/user/TimeRegistrationUpdateRequest.yaml"
   responses:
     "200":
       description: "Updated"
@@ -66,7 +66,7 @@ put:
             type: "string"
           examples:
             Success:
-              value: "Time updated successfully"
+              value: "Time registration updated successfully"
     "400":
       description: "Bad update request"
       content:
@@ -74,7 +74,7 @@ put:
           schema:
             type: "string"
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"
     "404":
       description: "Time registration not found"
       content:

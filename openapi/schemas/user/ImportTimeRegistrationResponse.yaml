@@ -7,7 +7,7 @@ items:
       format: "int64"
     status:
       type: "string"
-      description: "Describes the status of the registration (SUCCESS, PENDING, FAILED)"
+      description: "Describes the status of importing the time registration (SUCCESS, PENDING, FAILED)"
     message:
-      description: "Provides a description of the status"
+      description: "Provides a description of the import status"
       type: "string"

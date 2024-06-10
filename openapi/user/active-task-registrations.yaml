@@ -1,18 +1,18 @@
 get:
   tags:
-    - "Time registration"
+    - "TimeRegistration"
   operationId: "getTaskTimeRegistrationsOverview"
   description: "Returns time registrations for a user grouped by task"
   parameters:
     - name: "date"
-      description: "The date to consider when fetching active tasks and registrations"
+      description: "The date to consider when fetching active tasks and time registrations"
       in: query
       required: true
       schema:
         type: string
         format: "date"
     - name: "period"
-      description: "The period type to use when deciding which time period tasks are considered active"
+      description: "The time period to use when deciding in which time period tasks are considered active"
       in: query
       required: false
       schema:
@@ -24,20 +24,20 @@ get:
         description: >
           Valid values:
           * `day` - Only get tasks for the specified date
-          * `week` - Get the tasks for the whole week (Monday through Sunday) of the specified date
+          * `week` - Get the tasks for the whole week (Monday to Sunday) of the specified date
           * `month` - Get the tasks for the whole month of the specified date
   responses:
     "200":
-      description: "List of time registrations for the user"
+      description: "List of time registrations for the user grouped by task"
       content:
         application/json:
           schema:
-            $ref: "./schemas/TimeRegistrationsByTaskResponse.yaml"
+            $ref: "../schemas/user/TimeRegistrationsByTaskResponse.yaml"
     "400":
-      description: "Request contains an invalid period value"
+      description: "Request contains an invalid time period value"
       content:
         text/plain:
           schema:
             type: string
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"

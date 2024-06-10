@@ -1,0 +1,10 @@
+type: "object"
+properties:
+  date:
+    type: "string"
+    format: "date"
+  duration:
+    $ref: ../Duration.yaml
+  status:
+    description: "Describes the status of the time registration (PENDING, VALID, INVALID)"
+    type: string

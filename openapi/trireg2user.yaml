@@ -1,0 +1,54 @@
+openapi: "3.0.3"
+info:
+  title: "TriReg2 User API"
+  description: "An OpenAPI specification for time registrations to be used by a user"
+  version: "0.2.0"
+  contact:
+    name: "Trifork A/S"
+    email: "example@example.com"
+    url: "https://github.com/trifork/trireg2-api"
+  license:
+    name: "No License"
+    url: "https://github.com/trifork/trireg2-api"
+servers:
+  - url: https://trireg2.tcs.trifork.dev
+    description: Test server (uses test data)
+  - url: "http://0.0.0.0:8080"
+    description: Local development server
+tags:
+  - name: "Export"
+    description: "Tag for operations related to exporting time registrations to an external system"
+  - name: "Import"
+    description: "Tag for operations related to importing time registrations"
+  - name: "Login"
+    description: "Tag for operations related to logging into the service through a web browser"
+  - name: "Tag"
+    description: "Tag for CRUD operations related to adding tags to time registrations"
+  - name: "TimeRegistration"
+    description: "Tag for CRUD operations related to time registrations"
+paths:
+  /login:
+    $ref: user/login.yaml
+  /time-registration:
+    $ref: user/time-registration.yaml
+  /time-registration/active-task:
+    $ref: user/active-task-registrations.yaml
+  /time-registration/bulk:
+    $ref: user/time-registration-bulk.yaml
+  /export:
+    $ref: user/export.yaml
+  /tag:
+    $ref: user/tag.yaml
+  /import:
+    $ref: user/import.yaml
+components:
+  securitySchemes:
+    openId:
+      type: openIdConnect
+      openIdConnectUrl: https://oidc.hosted.trifork.com/auth/realms/trifork/.well-known/openid-configuration
+    basicAuth:
+      type: http
+      scheme: basic
+security:
+- openId: []
+- basicAuth: []

@@ -8,7 +8,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: "./schemas/admin/TagTaskMappingCreateRequest.yaml"
+          $ref: "../schemas/admin/TagTaskMappingCreateRequest.yaml"
   responses:
     "200":
       description: "TagTask mapping successfully created"
@@ -17,10 +17,10 @@ post:
           schema:
             type: "string"
     "400":
-      description: "Request contains invalid data and the TagTask mapping could not be created"
+      description: "Request contains invalid data. The TagTask mapping could not be created"
       content:
         text/plain:
           schema:
             type: "string"
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"

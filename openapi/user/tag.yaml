@@ -1,7 +1,7 @@
 get:
   tags:
-    - "Tagging"
-  operationId: "getRegistrationTags"
+    - "Tag"
+  operationId: "getTimeRegistrationTags"
   description: "Gets the tags associated with the given time registration"
   parameters:
     - in: query
@@ -10,56 +10,56 @@ get:
         type: "integer"
         format: "int64"
       required: true
-      description: "The ID of the registration to get tags for"
+      description: "The ID of the time registration to get tags for"
   responses:
     "200":
-      description: "List of tags for the requested registration"
+      description: "List of tags for the requested time registration"
       content:
         application/json:
           schema:
             type: array
             items:
-              $ref: "./schemas/TagTimeRegistrationResponse.yaml"
+              $ref: "../schemas/admin/TagTimeRegistrationResponse.yaml"
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"
     "404":
       description: "Unable to find a time registration with the specified timeRegistrationId"
     "502":
-      $ref: "./responses/BadGateway.yaml"
+      $ref: "../responses/BadGateway.yaml"
 post:
   tags:
-    - "Tagging"
-  operationId: "tagRegistration"
-  description: "Tags a time registration with specified tag and optional tag value"
+    - "Tag"
+  operationId: "tagTimeRegistration"
+  description: "Tags a time registration with a specified tag and optional tag value"
   requestBody:
-    description: "A JSON object containing tagging information"
+    description: "A JSON object containing tag information"
     required: true
     content:
       application/json:
         schema:
-          $ref: "./schemas/TagTimeRegistrationRequest.yaml"
+          $ref: "../schemas/admin/TagTimeRegistrationRequest.yaml"
   responses:
     "200":
-      description: "Tag was successfully registered on the registration"
+      description: "Tag was successfully added to the time registration"
       content:
         text/plain:
           schema:
             type: "string"
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"
     "400":
-      description: "Tag was not added to the registration due to an issue with the request"
+      description: "Tag was not added to the time registration due to an error with the request"
     "404":
-      description: "No registration was found to tag"
+      description: "No time registration was found to tag"
     "502":
-      $ref: "./responses/BadGateway.yaml"
+      $ref: "../responses/BadGateway.yaml"
 put:
   tags:
-    - "Tagging"
+    - "Tag"
   operationId: "updateTagRegistration"
   description: "Updates a tag that was added to a time registration"
   requestBody:
-    description: "A JSON object containing the updated tagging information"
+    description: "A JSON object containing the updated tag information"
     required: true
     content:
       application/json:
@@ -82,12 +82,12 @@ put:
     "400":
       description: "The updated tag information yields an invalid tag"
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"
     "404":
       description: "The specified tag was not found"
 delete:
   tags:
-    - "Tagging"
+    - "Tag"
   operationId: "deleteTagRegistration"
   description: "Deletes a tag that was added to a time registration"
   parameters:
@@ -100,12 +100,12 @@ delete:
       description: "The ID of the tag to delete"
   responses:
     "200":
-      description: "Tag was successfully removed"
+      description: "Tag was successfully deleted"
       content:
         text/plain:
           schema:
             type: "string"
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"
     "404":
       description: "The requested tag was not found and could not be deleted"

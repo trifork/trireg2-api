@@ -1,6 +1,6 @@
 get:
   tags:
-    - "TagConfigurations"
+    - "TagConfiguration"
   operationId: "getTagConfigurations"
   description: "Gets all tag configurations that are applicable to the provided task"
   parameters:
@@ -19,18 +19,18 @@ get:
         type: "boolean"
   responses:
     "200":
-      description: "List of valid tag configurations for the requested task"
+      description: "List of valid tag configurations for the specified task"
       content:
         application/json:
           schema:
-            $ref: "./schemas/TagConfigurationResponse.yaml"
+            $ref: "../schemas/admin/TagConfigurationResponse.yaml"
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"
     "404":
       description: "Unable to find tag configurations for the specified task (No task with specified taskId exists)"
 post:
   tags:
-    - "TagConfigurations"
+    - "TagConfiguration"
   operationId: "createTagConfiguration"
   description: "Creates a new tag configuration"
   requestBody:
@@ -38,7 +38,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: "./schemas/admin/TagConfigurationCreateRequest.yaml"
+          $ref: "../schemas/admin/TagConfigurationCreateRequest.yaml"
   responses:
     "200":
       description: "The tag configuration was successfully created"
@@ -47,16 +47,16 @@ post:
           schema:
             type: "string"
     "400":
-      description: "Request contains invalid data and the tag configuration was not created"
+      description: "Request contains invalid data. The tag configuration was not created"
       content:
         text/plain:
           schema:
             type: "string"
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"
 put:
   tags:
-    - "TagConfigurations"
+    - "TagConfiguration"
   operationId: "updateTagConfiguration"
   description: "Updates an existing tag configuration"
   parameters:
@@ -72,7 +72,7 @@ put:
     content:
       application/json:
         schema:
-          $ref: "./schemas/admin/TagConfigurationUpdateRequest.yaml"
+          $ref: "../schemas/admin/TagConfigurationUpdateRequest.yaml"
   responses:
     "200":
       description: "The tag configuration was successfully updated"
@@ -81,13 +81,13 @@ put:
           schema:
             type: "string"
     "400":
-      description: "Request contains invalid data and the tag configuration was not updated"
+      description: "Request contains invalid data. The tag configuration was not updated"
       content:
         text/plain:
           schema:
             type: "string"
     "401":
-      $ref: "./responses/UnauthorizedError.yaml"
+      $ref: "../responses/UnauthorizedError.yaml"
     "404":
       description: "The specified task configuration was not found"
       content:
