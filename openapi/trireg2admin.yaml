@@ -2,7 +2,7 @@ openapi: "3.0.3"
 info:
   title: "TriReg2 Admin API"
   description: "An OpenAPI specification for time registrations to be used by an administrator"
-  version: "0.1.2"
+  version: "0.2.0"
   contact:
     name: "TBD"
     email: "placeholder@trifork.com"

@@ -2,7 +2,7 @@ openapi: "3.0.3"
 info:
   title: "TriReg2 User API"
   description: "An OpenAPI specification for time registrations to be used by a user"
-  version: "0.1.2"
+  version: "0.2.0"
   contact:
     name: "TBD"
     email: "placeholder@trifork.com"

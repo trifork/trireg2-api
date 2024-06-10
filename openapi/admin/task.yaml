@@ -2,7 +2,7 @@ get:
   tags:
     - "Task"
   operationId: "getTasksForUser"
-  description: "Gets the tasks available for the user"
+  description: "Gets the tasks available to the user"
   parameters:
     - name: "userId"
       in: "query"
