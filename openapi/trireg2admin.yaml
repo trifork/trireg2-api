@@ -4,8 +4,8 @@ info:
   description: "An OpenAPI specification for time registrations to be used by an administrator"
   version: "0.2.0"
   contact:
-    name: "TBD"
-    email: "placeholder@trifork.com"
+    name: "Trifork A/S"
+    email: "example@example.com"
     url: "https://github.com/trifork/trireg2-api"
   license:
     name: "No License"
