@@ -28,7 +28,7 @@ Create a time registration using basic auth for a test user with the curl comman
 curl -u "testuser:triregpassword1" --location 'https://trireg2.tcs.trifork.dev/time-registration' \
 --header 'Content-Type: application/json' \
 --data '{
-    "taskId": "sometask",
+    "taskId": "1",
     "date": "2024-05-02",
     "duration": "PT1H30M"
 }' -w "\n"
@@ -68,12 +68,12 @@ curl -u "testuser:triregpassword1" --location 'https://trireg2.tcs.trifork.dev/i
 --data '[
     {
         "userId": "123",
-        "taskId": "hello",
+        "taskId": "1",
         "date": "2024-05-03",
         "duration": "PT1H20M",
         "tags": [
             {
-                "tagConfigurationId": "noteId",
+                "tagConfigurationId": "2",
                 "value": "note"
             }
         ]

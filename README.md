@@ -10,9 +10,15 @@ clients to request changes or suggestions via pull requests or adding issues to 
 
 ## Swagger html API page 
 
-You can view the OpenAPI Swagger static html API page here:
+You can view the OpenAPI Swagger static html API pages via the following links:
 
-https://trireg2.tcs.trifork.dev/openapi/yaml or https://trireg2.tcs.trifork.dev/openapi/doc
+The user API:
+
+https://trireg2.tcs.trifork.dev/openapi/yaml/user or https://trireg2.tcs.trifork.dev/openapi/doc/user
+
+The admin API:
+
+https://trireg2.tcs.trifork.dev/openapi/yaml/admin or https://trireg2.tcs.trifork.dev/openapi/doc/admin
 
 ## Use the API
 
