@@ -93,7 +93,7 @@ delete:
       required: true
       schema:
         type: "integer"
-        format: "int54"
+        format: "int64"
   responses:
     "200":
       description: "deleted"
