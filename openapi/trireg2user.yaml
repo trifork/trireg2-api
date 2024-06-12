@@ -8,8 +8,8 @@ info:
     email: "example@example.com"
     url: "https://github.com/trifork/trireg2-api"
   license:
-    name: "No License"
-    url: "https://github.com/trifork/trireg2-api"
+    name: "MIT License"
+    url: "https://github.com/trifork/trireg2-api/LICENSE.md"
 servers:
   - url: https://trireg2.tcs.trifork.dev
     description: Test server (uses test data)
