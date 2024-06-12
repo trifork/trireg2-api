@@ -81,3 +81,44 @@ put:
         text/plain:
           schema:
             type: "string"
+delete:
+  tags:
+    - "TimeRegistration"
+  operationId: "deleteTimeRegistration"
+  description: "Deletes the specified time registration"
+  parameters:
+    - name: "timeRegistrationId"
+      in: "query"
+      description: "The id of the time registration to delete"
+      required: true
+      schema:
+        type: "integer"
+        format: "int64"
+  responses:
+    "200":
+      description: "deleted"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+          examples:
+            success-deleted:
+              value: "Time registration deleted successfully"
+              description: "The time registration was deleted successfully (Status = deleted)"
+            success-rejected:
+              value: "Time registration rejected successfully"
+              description: "The imported time registration was rejected successfully (Status = rejected)"
+    "400":
+      description: "Bad delete request"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+    "404":
+      description: "Time registration not found"
+      content:
+        text/plain:
+          schema:
+            type: "string"
