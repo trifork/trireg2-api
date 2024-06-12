@@ -20,9 +20,9 @@ The old trireg server, which is used in this setup, is running in a test environ
 
 The duration provided in some of the API requests or responses must be specified as an ISO 8601 formatted duration component, on the form `PnDTnHnMn.nS`. For example, `PT1H30M` representing 1 hour and 30 minutes.
 
-### Create 
+### Add 
 
-Create a time registration using basic auth for a test user with the curl command:
+Add a time registration using basic auth for a test user with the curl command:
 
 ```
 curl -u "testuser:triregpassword1" --location 'https://trireg2.tcs.trifork.dev/time-registration' \
@@ -79,4 +79,30 @@ curl -u "testuser:triregpassword1" --location 'https://trireg2.tcs.trifork.dev/i
         ]
     }
 ]'
+```
+
+## Several time registrations in one request
+
+Add several time registrations for a user in the same request, using basic auth, for a test user with the curl command:
+
+```
+curl -u "testuser:triregpassword1" --location 'https://trireg2.tcs.trifork.dev/time-registration/bulk' \
+--header 'Content-Type: application/json' \
+--data '[
+    {
+        "taskId": "2",
+        "date": "2024-05-20",
+        "duration": "PT1H"
+    },
+    {
+        "taskId": "1",
+        "date": "2024-05-19",
+        "duration": "PT6H"
+    },
+    {
+        "taskId": "2",
+        "date": "2024-05-18",
+        "duration": "PT5H"
+    }
+]' -w "\n"
 ```
