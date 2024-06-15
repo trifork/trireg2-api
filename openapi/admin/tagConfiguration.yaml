@@ -43,9 +43,9 @@ post:
     "200":
       description: "The tag configuration was successfully created"
       content:
-        text/plain:
+        application/json:
           schema:
-            type: "string"
+            $ref: "../schemas/DefaultCreateResponse.yaml"
     "400":
       description: "Request contains invalid data. The tag configuration was not created"
       content:
@@ -77,9 +77,9 @@ put:
     "200":
       description: "The tag configuration was successfully updated"
       content:
-        text/plain:
+        application/json:
           schema:
-            type: "string"
+            $ref: "../schemas/DefaultUpdateResponse.yaml"
     "400":
       description: "Request contains invalid data. The tag configuration was not updated"
       content:

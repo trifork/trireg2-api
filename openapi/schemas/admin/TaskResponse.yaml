@@ -1,0 +1,9 @@
+type: "object"
+required: ["taskId", "name"]
+properties:
+  taskId:
+    type: "integer"
+    format: "int64"
+  name:
+    type: "string"
+    description: "The name of the task"

@@ -28,14 +28,17 @@ post:
           $ref: "../schemas/user/TimeRegistrationRequest.yaml"
   responses:
     "201":
-      description: "Created"
+      description: "Time registration added successfully"
       content:
-        text/plain:
+        application/json:
           schema:
-            type: "string"
+            $ref: "../schemas/DefaultCreateResponse.yaml"
           examples:
             Example#1:
-              value: "Time registration added successfully"
+              value: {
+                "id": 12345,
+                "status": "Time registration added successfully"
+              }
     "401":
       $ref: "../responses/UnauthorizedError.yaml"
 put:
@@ -61,12 +64,15 @@ put:
     "200":
       description: "Updated"
       content:
-        text/plain:
+        application/json:
           schema:
-            type: "string"
+            $ref: "../schemas/DefaultCreateResponse.yaml"
           examples:
             Success:
-              value: "Time registration updated successfully"
+              value: {
+                "id": 12345,
+                "status": "Time registration updated successfully"
+              }
     "400":
       description: "Bad update request"
       content:
@@ -98,16 +104,20 @@ delete:
     "200":
       description: "deleted"
       content:
-        text/plain:
+        application/json:
           schema:
-            type: "string"
+            $ref: "../schemas/DefaultDeleteResponse.yaml"
           examples:
             success-deleted:
-              value: "Time registration deleted successfully"
-              description: "The time registration was deleted successfully (Status = deleted)"
+              value: {
+                "id": 12345,
+                "status": "The time registration was deleted successfully (Status = deleted)"
+              }
             success-rejected:
-              value: "Time registration rejected successfully"
-              description: "The imported time registration was rejected successfully (Status = rejected)"
+              value: {
+                "id": 54321,
+                "status": "The imported time registration was rejected successfully (Status = rejected)"
+              }
     "400":
       description: "Bad delete request"
       content:

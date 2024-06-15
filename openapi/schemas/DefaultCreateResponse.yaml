@@ -1,0 +1,15 @@
+type: "object"
+description: "A response to a create operation."
+required: ["id", "status"]
+properties:
+  id:
+    type: "integer"
+    format: "int64"
+    description: "The id of the created entity."
+  status:
+    type: "string"
+    description: "A description of the status of the create operation."
+example: {
+  "id": 12345,
+  "status": "The data was created successfully"
+}
