@@ -17,7 +17,9 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../schemas/admin/TaskCreateResponse.yaml"
+            type: "array"
+            items:
+              $ref: "../schemas/admin/TaskResponse.yaml"
     "401":
       $ref: "../responses/UnauthorizedError.yaml"
 post:
@@ -35,12 +37,15 @@ post:
     "200":
       description: "Successfully created the new task"
       content:
-        text/plain:
+        application/json:
           schema:
-            type: "string"
+            $ref: "../schemas/DefaultCreateResponse.yaml"
           examples:
             Success:
-              value: "Successfully created the new task"
+              value: {
+                "id": 12345,
+                "status": "Successfully created the new task"
+              }
     "400":
       description: "Request contains invalid data. The task was not created"
       content:
@@ -72,12 +77,15 @@ put:
     "200":
       description: "Successfully updated the task"
       content:
-        text/plain:
+        application/json:
           schema:
-            type: "string"
+            $ref: "../schemas/DefaultUpdateResponse.yaml"
           examples:
             Success:
-              value: "Successfully updated the task"
+              value: {
+                "id": 12345,
+                "status": "Successfully updated the task"
+              }
     "400":
       description: "Request contains invalid data. The task was not updated"
       content:

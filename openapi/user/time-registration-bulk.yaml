@@ -14,14 +14,25 @@ post:
             $ref: "../schemas/user/TimeRegistrationRequest.yaml"
   responses:
     "201":
-      description: "Created"
+      description: "Time registrations added successfully"
       content:
-        text/plain:
+        application/json:
           schema:
-            type: "string"
+            type: "array"
+            items:
+              $ref: "../schemas/DefaultCreateResponse.yaml"
           examples:
-            Example#1:
-              value: "Time registrations added successfully"
+            success:
+              value: [
+                {
+                  "id": 12345,
+                  "status": "The time registration was created successfully"
+                },
+                {
+                  "id": 12346,
+                  "status": "The time registration was created successfully"
+                }
+              ]
     "400":
       description: "Failed creating one or more time registrations - if one time registration failed, no time registration is saved"
       content:

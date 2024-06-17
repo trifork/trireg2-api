@@ -1,0 +1,14 @@
+type: "object"
+description: "A response to an update operation."
+required: ["id", "status"]
+properties:
+  id:
+    type: "integer"
+    format: "int64"
+    description: "The id of the updated entity."
+  status:
+    type: "string"
+    description: "A description of the status of the update operation."
+example:
+    id: 12345
+    status: "The data was updated successfully"
