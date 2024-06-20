@@ -9,7 +9,9 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../schemas/admin/UserGroupResponse.yaml"
+            type: "array"
+            items:
+              $ref: "../schemas/admin/UserGroupResponse.yaml"
     "401":
       $ref: "../responses/UnauthorizedError.yaml"
     "403":
