@@ -24,3 +24,5 @@ post:
             type: "string"
     "401":
       $ref: "../responses/UnauthorizedError.yaml"
+    "403":
+      $ref: "../responses/ForbiddenError.yaml"

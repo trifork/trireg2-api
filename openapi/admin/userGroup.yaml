@@ -1,0 +1,82 @@
+get:
+  tags:
+    - "UserGroup"
+  operationId: "getAllUserGroups"
+  responses:
+    200:
+      description: "User groups successfully fetched"
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/admin/UserGroupResponse.yaml"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+    "403":
+      $ref: "../responses/ForbiddenError.yaml"
+post:
+  tags:
+    - "UserGroup"
+  operationId: "createUserGroup"
+  description: "Create a new user group"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/admin/UserGroupCreateRequest.yaml"
+  responses:
+    200:
+      description: "User group was successfully created"
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/DefaultCreateResponse.yaml"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+    "403":
+      $ref: "../responses/ForbiddenError.yaml"
+put:
+  tags:
+    - "UserGroup"
+  operationId: "updateUserGroup"
+  description: "Update an existing user group"
+  parameters:
+    - name: "userGroupId"
+      in: query
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/admin/UserGroupCreateRequest.yaml"
+  responses:
+    200:
+      description: "User group was successfully updated"
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/DefaultUpdateResponse.yaml"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+    "403":
+      $ref: "../responses/ForbiddenError.yaml"
+delete:
+  tags:
+    - "UserGroup"
+  operationId: "deleteUserGroup"
+  description: "Deletes a user group"
+  parameters:
+    - name: "userGroupId"
+      in: query
+      required: true
+  responses:
+    200:
+      description: ""
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/DefaultDeleteResponse.yaml"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+    "403":
+      $ref: "../responses/ForbiddenError.yaml"

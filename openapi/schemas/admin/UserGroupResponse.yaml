@@ -1,0 +1,7 @@
+type: object
+required: ["userGroupName", "userGroupDescription"]
+properties:
+  userGroupName:
+    type: string
+  userGroupDescription:
+    type: string

@@ -54,6 +54,8 @@ post:
             type: "string"
     "401":
       $ref: "../responses/UnauthorizedError.yaml"
+    "403":
+      $ref: "../responses/ForbiddenError.yaml"
 put:
   tags:
     - "Task"
@@ -94,6 +96,8 @@ put:
             type: "string"
     "401":
       $ref: "../responses/UnauthorizedError.yaml"
+    "403":
+      $ref: "../responses/ForbiddenError.yaml"
     "404":
       description: "The specified task was not found"
       content:

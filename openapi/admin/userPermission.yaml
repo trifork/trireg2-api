@@ -1,0 +1,64 @@
+get:
+  tags:
+    - "UserPermission"
+  operationId: "getUserPermissions"
+  description: "Gets all permissions granted to a user",
+  parameters:
+    - name: "userId"
+      in: "query"
+      required: true
+  responses:
+    "200":
+      description: "Successfully fetched all user permissions"
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../schemas/admin/UserPermissionType.yaml"
+post:
+  tags:
+    - "UserPermission"
+  operationId: "addUserPermissions"
+  description: "Gets all permissions granted to a user",
+  parameters:
+    - name: "userId"
+      in: "query"
+      required: true
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            $ref: "../schemas/admin/UserPermissionType.yaml"
+  responses:
+    "200":
+      description: "Successfully fetched all user permissions"
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/DefaultCreateResponse.yaml"
+delete:
+  tags:
+    - "UserPermission"
+  operationId: "removeUserPermissions"
+  description: "Removes all specified permissions granted to a user",
+  parameters:
+    - name: "userId"
+      in: "query"
+      required: true
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            $ref: "../schemas/admin/UserPermissionType.yaml"
+  responses:
+    "200":
+      description: "Successfully deleted user permissions"
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/DefaultDeleteResponse.yaml"

@@ -1,0 +1,91 @@
+get:
+  tags:
+    - "UserGroupManagement"
+  operationId: "getUsersInGroup"
+  description: "Gets all users in a user group",
+  parameters:
+    - name: "userGroupId"
+      in: "query"
+      required: true
+  responses:
+    "200":
+      description: "User group relations for the specified user group"
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/admin/UserGroupRelations.yaml"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+    "403":
+      $ref: "../responses/ForbiddenError.yaml"
+post:
+  tags:
+    - "UserGroupManagement"
+  operationId: "addUserToUserGroup"
+  description: "Add a user to a user group"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/admin/UserGroupRelationCreateRequest.yaml"
+  responses:
+    "200":
+      description: "User group relation for user was successfully created"
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/DefaultCreateResponse.yaml"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+    "403":
+      $ref: "../responses/ForbiddenError.yaml"
+put:
+  tags:
+    - "UserGroupManagement"
+  operationId: "updateUserRelationToUserGroup"
+  description: "Add a user to a user group"
+  parameters:
+    - name: "userId"
+      in: "query"
+      required: true
+    - name: "userGroupId"
+      in: "query"
+      required: true
+    - name: "userGroupRelation"
+      in: "query"
+      required: true
+  responses:
+    "200":
+      description: "User group relation for user was successfully updated"
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/DefaultUpdateResponse.yaml"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+    "403":
+      $ref: "../responses/ForbiddenError.yaml"
+delete:
+  tags:
+    - "UserGroupManagement"
+  operationId: "deleteUserFromUserGroup"
+  description: "Remove a user from a user group"
+  parameters:
+    - name: "userId"
+      in: "query"
+      required: true
+    - name: "userGroupId"
+      in: "query"
+      required: true
+  responses:
+    "200":
+      description: "User group relation for successfully deleted"
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/DefaultDeleteResponse.yaml"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+    "403":
+      $ref: "../responses/ForbiddenError.yaml"

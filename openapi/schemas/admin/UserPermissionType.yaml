@@ -1,0 +1,17 @@
+type: "string"
+enum:
+  - "MODIFY_CONFIGURATIONS"
+  - "MODIFY_TASKS"
+  - "MODIFY_GROUPS"
+  - "MODIFY_PERMISSIONS"
+  - "READ_ALL"
+  - "WRITE_ALL"
+description: >
+  Describes a user's permission to performing certain operations
+  Valid values:
+  * `MODIFY_CONFIGURATIONS` - User is allowed to create, edit, update, and delete tag configurations and define the relation to existing tasks
+  * `MODIFY_TASKS` - User is allowed to create, edit, update, and delete tasks
+  * `MODIFY_GROUPS` - User is a allowed to modify create, modify, and update user groups
+  * `MODIFY_PERMISSIONS` - User is allowed to add and remove permissions from a user
+  * `READ_ALL` - User can read data on all users
+  * `WRITE_ALL` - User can read and write data on all users
