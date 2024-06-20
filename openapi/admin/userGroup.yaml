@@ -46,6 +46,7 @@ put:
   parameters:
   - name: "userGroupId"
     description: "ID of the user group to update"
+    required: true
     in: query
     schema:
       type: "integer"
