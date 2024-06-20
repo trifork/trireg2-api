@@ -7,6 +7,9 @@ get:
     - name: "userGroupId"
       in: "query"
       required: true
+      schema:
+        type: "integer"
+        format: "int64"
   responses:
     "200":
       description: "User group relations for the specified user group"
@@ -49,12 +52,21 @@ put:
     - name: "userId"
       in: "query"
       required: true
+      schema:
+        type: "integer"
+        format: "int64"
     - name: "userGroupId"
       in: "query"
       required: true
+      schema:
+        type: "integer"
+        format: "int64"
     - name: "userGroupRelation"
       in: "query"
       required: true
+      schema:
+        type: "integer"
+        format: "int64"
   responses:
     "200":
       description: "User group relation for user was successfully updated"
@@ -75,9 +87,15 @@ delete:
     - name: "userId"
       in: "query"
       required: true
+      schema:
+        type: "integer"
+        format: "int64"
     - name: "userGroupId"
       in: "query"
       required: true
+      schema:
+        type: "integer"
+        format: "int64"
   responses:
     "200":
       description: "User group relation for successfully deleted"

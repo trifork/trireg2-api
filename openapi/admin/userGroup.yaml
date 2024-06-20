@@ -2,8 +2,9 @@ get:
   tags:
     - "UserGroup"
   operationId: "getAllUserGroups"
+  description: "Finds all user groups"
   responses:
-    200:
+    "200":
       description: "User groups successfully fetched"
       content:
         application/json:
@@ -25,7 +26,7 @@ post:
         schema:
           $ref: "../schemas/admin/UserGroupCreateRequest.yaml"
   responses:
-    200:
+    "200":
       description: "User group was successfully created"
       content:
         application/json:
@@ -42,7 +43,11 @@ put:
   description: "Update an existing user group"
   parameters:
     - name: "userGroupId"
+      description: "ID of the user group to update"
       in: query
+      schema:
+        type: "integer"
+        format: "int64"
   requestBody:
     required: true
     content:
@@ -50,7 +55,7 @@ put:
         schema:
           $ref: "../schemas/admin/UserGroupCreateRequest.yaml"
   responses:
-    200:
+    "200":
       description: "User group was successfully updated"
       content:
         application/json:
@@ -67,10 +72,14 @@ delete:
   description: "Deletes a user group"
   parameters:
     - name: "userGroupId"
+      description: "ID of the user group to delete"
       in: query
       required: true
+      schema:
+        type: "integer"
+        format: "int64"
   responses:
-    200:
+    "200":
       description: ""
       content:
         application/json:
