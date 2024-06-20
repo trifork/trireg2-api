@@ -35,8 +35,8 @@ paths:
     $ref: "admin/tagConfiguration.yaml"
   /config/task-tag:
     $ref: "admin/tagTaskMapping.yaml"
-  #/user/permission:
-  #  $ref: admin/userPermission.yaml
+  /user/permission:
+    $ref: admin/userPermission.yaml
   /user-group/user:
     $ref: "admin/userGroupAdministration.yaml"
   /user-group:
