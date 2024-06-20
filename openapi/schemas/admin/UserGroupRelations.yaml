@@ -6,4 +6,4 @@ items:
       type: "integer"
       format: "int64"
     relationType:
-      $ref: "/UserGroupRelationType.yaml"
+      $ref: "UserGroupRelationType.yaml"

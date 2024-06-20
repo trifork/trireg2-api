@@ -7,4 +7,4 @@ properties:
     type: "integer"
     format: "int64"
   userGroupRelation:
-    $ref: "/UserGroupRelationType.yaml"
+    $ref: "UserGroupRelationType.yaml"
