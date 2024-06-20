@@ -1,6 +1,6 @@
 get:
   tags:
-    - "UserGroup"
+  - "UserGroup"
   operationId: "getAllUserGroups"
   description: "Finds all user groups"
   responses:
@@ -16,7 +16,7 @@ get:
       $ref: "../responses/ForbiddenError.yaml"
 post:
   tags:
-    - "UserGroup"
+  - "UserGroup"
   operationId: "createUserGroup"
   description: "Create a new user group"
   requestBody:
@@ -38,16 +38,16 @@ post:
       $ref: "../responses/ForbiddenError.yaml"
 put:
   tags:
-    - "UserGroup"
+  - "UserGroup"
   operationId: "updateUserGroup"
   description: "Update an existing user group"
   parameters:
-    - name: "userGroupId"
-      description: "ID of the user group to update"
-      in: query
-      schema:
-        type: "integer"
-        format: "int64"
+  - name: "userGroupId"
+    description: "ID of the user group to update"
+    in: query
+    schema:
+      type: "integer"
+      format: "int64"
   requestBody:
     required: true
     content:
@@ -67,17 +67,17 @@ put:
       $ref: "../responses/ForbiddenError.yaml"
 delete:
   tags:
-    - "UserGroup"
+  - "UserGroup"
   operationId: "deleteUserGroup"
   description: "Deletes a user group"
   parameters:
-    - name: "userGroupId"
-      description: "ID of the user group to delete"
-      in: query
-      required: true
-      schema:
-        type: "integer"
-        format: "int64"
+  - name: "userGroupId"
+    description: "ID of the user group to delete"
+    in: query
+    required: true
+    schema:
+      type: "integer"
+      format: "int64"
   responses:
     "200":
       description: ""

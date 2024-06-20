@@ -30,17 +30,17 @@ tags:
     description: "Tag for CRUD operations related to the configuration of user permissions"
 paths:
   /task:
-    $ref: admin/task.yaml
+    $ref: "admin/task.yaml"
   /config/tag:
-    $ref: admin/tagConfiguration.yaml
+    $ref: "admin/tagConfiguration.yaml"
   /config/task-tag:
-    $ref: admin/tagTaskMapping.yaml
-  /user/permission:
-    $ref: admin/userPermission.yaml
+    $ref: "admin/tagTaskMapping.yaml"
+  #/user/permission:
+  #  $ref: admin/userPermission.yaml
   /user-group/user:
-    $ref: admin/userGroupAdministration.yaml
+    $ref: "admin/userGroupAdministration.yaml"
   /user-group:
-    $ref: admin/userGroup.yaml
+    $ref: "admin/userGroup.yaml"
 components:
   securitySchemes:
     openId:
