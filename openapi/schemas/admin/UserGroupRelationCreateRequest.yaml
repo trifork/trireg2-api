@@ -1,4 +1,5 @@
 type: "object"
+required: ["userId", "userGroupId", "userGroupRelation"]
 properties:
   userId:
     type: "integer"
