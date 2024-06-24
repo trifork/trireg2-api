@@ -1,3 +1,35 @@
+get:
+  tags:
+    - "TagTaskMapping"
+  operationId: "getTagTaskMappings"
+  description: "Gets all tag configurations that are associated to the provided task"
+  parameters:
+    - name: "taskId"
+      in: "query"
+      description: "The id of the task to get associated tag configurations for"
+      required: true
+      schema:
+        type: "integer"
+        format: "int64"
+    - name: "includeHidden"
+      in: "query"
+      description: "Include tags that are normally hidden and automatically added when registering time on the task"
+      required: false
+      schema:
+        type: "boolean"
+  responses:
+    "200":
+      description: "List of valid tag configurations for the specified task"
+      content:
+        application/json:
+          schema:
+            type: "array"
+            items:
+              $ref: "../schemas/admin/TagTaskConfigurationResponse.yaml"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+    "404":
+      description: "Unable to find tag configurations for the specified task (No task with specified taskId exists)"
 post:
   tags:
     - "TagTaskMapping"
@@ -26,3 +58,45 @@ post:
       $ref: "../responses/UnauthorizedError.yaml"
     "403":
       $ref: "../responses/ForbiddenError.yaml"
+put:
+  tags:
+    - "TagTaskMapping"
+  operationId: "updateTagTaskMapping"
+  description: "Updates a relation between a task and a tag configuration"
+  parameters:
+    - name: "tagTaskMappingId"
+      in: "query"
+      description: "The id of the relation to update"
+      required: true
+      schema:
+        type: "integer"
+        format: "int64"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/admin/TagTaskMappingUpdateRequest.yaml"
+  responses:
+    "200":
+      description: "The relation was successfully updated"
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/DefaultUpdateResponse.yaml"
+    "400":
+      description: "Request contains invalid data. The relation was not updated"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+    "403":
+      $ref: "../responses/ForbiddenError.yaml"
+    "404":
+      description: "The specified relation was not found"
+      content:
+        text/plain:
+          schema:
+            type: "string"

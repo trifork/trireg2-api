@@ -1,0 +1,6 @@
+type: "string"
+description: "Describes the value type of the tag"
+enum:
+  - "string"
+  - "bool"
+  - "int"

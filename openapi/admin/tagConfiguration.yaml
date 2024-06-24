@@ -2,32 +2,28 @@ get:
   tags:
     - "TagConfiguration"
   operationId: "getTagConfigurations"
-  description: "Gets all tag configurations that are applicable to the provided task"
+  description: "Gets tag configurations based on the provided query parameters"
   parameters:
-    - name: "taskId"
+    - name: "tagConfigurationId"
       in: "query"
-      description: "The id of the task to get applicable tag configurations for"
-      required: true
+      description: "The id of the tag configuration to get. If unspecified, all tag configurations are returned"
+      required: false
       schema:
         type: "integer"
         format: "int64"
-    - name: "includeHidden"
-      in: "query"
-      description: "Include tags that are normally hidden and automatically added when registering time on the task"
-      required: false
-      schema:
-        type: "boolean"
   responses:
     "200":
-      description: "List of valid tag configurations for the specified task"
+      description: "List of tag configurations for the provided query parameters"
       content:
         application/json:
           schema:
-            $ref: "../schemas/admin/TagConfigurationResponse.yaml"
+            type: "array"
+            items:
+              $ref: "../schemas/admin/TagConfigurationResponse.yaml"
     "401":
       $ref: "../responses/UnauthorizedError.yaml"
     "404":
-      description: "Unable to find tag configurations for the specified task (No task with specified taskId exists)"
+      description: "Unable to find tag configurations for the query parameters (e.g. no tag configuration with specified id exists)"
 post:
   tags:
     - "TagConfiguration"
@@ -93,7 +89,7 @@ put:
     "403":
       $ref: "../responses/ForbiddenError.yaml"
     "404":
-      description: "The specified task configuration was not found"
+      description: "The specified tag configuration was not found"
       content:
         text/plain:
           schema:
