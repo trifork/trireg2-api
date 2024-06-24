@@ -8,13 +8,8 @@ properties:
     type: "integer"
     format: "int64"
   relation:
-    type: "string"
-    description: "The type of relation between the task and tag"
-    enum:
-      - "optional"
-      - "mandatory"
-      - "hidden"
+    $ref: "TagTaskRelationType.yaml"
   defaultValue:
     type: "string"
     default: ""
-    description: "The default value to use when adding the tag to a tag configuration"
+    description: "The default value to use when adding the tag to the task"
