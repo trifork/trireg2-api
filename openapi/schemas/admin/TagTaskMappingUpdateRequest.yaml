@@ -1,0 +1,9 @@
+type: "object"
+required: ["relation"]
+properties:
+  relation:
+    $ref: "TagTaskRelationType.yaml"
+  defaultValue:
+    type: "string"
+    default: ""
+    description: "The default value to use when adding the tag to a the task"

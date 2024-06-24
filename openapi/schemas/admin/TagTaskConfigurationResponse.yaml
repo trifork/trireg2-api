@@ -1,0 +1,31 @@
+type: "object"
+required: ["tagTaskMappingId", "tagConfigurationId", "taskId", "tagConfigurationName", "tagValueType", "tagTaskRelation"]
+description: "A mapping between a tag configuration and a task, specifying the relation between the two. A tag configuration can be mapped to different tasks with different relation-types. For example, a tag configuration can be mandatory for one task, and optional for another."
+properties:
+  tagTaskMappingId:
+    type: "integer"
+    format: "int64"
+    description: "An identifier for this mapping"
+  tagConfigurationId:
+    type: "integer"
+    format: "int64"
+    description: "The id for the tag configuration that this mapping is associated to"
+  taskId:
+    type: "integer"
+    format: "int64"
+    description: "The id for the task that this mapping is associated to"
+  tagConfigurationName:
+    type: "string"
+    description: "The name of the tag configuration"
+  tagDescription:
+    type: "string"
+    description: "A description of the tag configuration"
+  tagValueType:
+    type: "string"
+    description: "Describes the value type of the tag"
+  tagDefaultValue:
+    type: "string"
+    description: "The default value to use when no other value is specified when adding a tag to a time registration"
+  tagTaskRelation:
+    type: "string"
+    description: "Specifies the relation to the task. For example, whether the tag is optional or mandatory"

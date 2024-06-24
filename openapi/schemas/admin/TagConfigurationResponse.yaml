@@ -1,22 +1,14 @@
-type: "array"
-items:
-  required: ["tagConfigurationId", "tagConfigurationName", "tagDescription", "tagValueType", "tagTaskRelation"]
-  properties:
-    tagConfigurationId:
-      type: "integer"
-      format: "int64"
-    tagConfigurationName:
-      type: "string"
-      description: "The name of the tag configuration"
-    tagDescription:
-      type: "string"
-      description: "A description of the tag configuration"
-    tagValueType:
-      type: "string"
-      description: "Describes the value type of the tag"
-    tagDefaultValue:
-      type: "string"
-      description: "The default value to use when no other value is specified when adding a tag to a time registration"
-    tagTaskRelation:
-      type: "string"
-      description: "Specifies the relation to the task. For example, whether the tag is optional or mandatory"
+type: "object"
+required: ["tagConfigurationId", "tagConfigurationName", "tagConfigurationValueType"]
+properties:
+  tagConfigurationId:
+    type: "integer"
+    format: "int64"
+  tagConfigurationName:
+    type: "string"
+    description: "The name of the tag configuration"
+  tagConfigurationDescription:
+    type: "string"
+    description: "A description of the tag configuration"
+  tagConfigurationValueType:
+    $ref: "TagConfigurationValueType.yaml"
