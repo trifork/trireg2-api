@@ -27,8 +27,8 @@ get:
 post:
   tags:
   - "UserPermission"
-  operationId: "addUserPermissions"
-  description: "Gets all permissions granted to a user"
+  operationId: "addUserPermission"
+  description: "Grants the specified permission to a user"
   parameters:
   - name: "userId"
     description: "ID of the user to add permissions for"
@@ -41,9 +41,7 @@ post:
     content:
       application/json:
         schema:
-          type: array
-          items:
-            $ref: "../schemas/admin/UserPermissionType.yaml"
+          $ref: "../schemas/admin/UserPermissionType.yaml"
   responses:
     "200":
       description: "Successfully fetched all user permissions"
@@ -58,8 +56,8 @@ post:
 delete:
   tags:
   - "UserPermission"
-  operationId: "removeUserPermissions"
-  description: "Removes all specified permissions granted to a user"
+  operationId: "removeUserPermission"
+  description: "Removes the specified permissions granted to a user"
   parameters:
   - name: "userId"
     description: "ID of the user to delete permissions for"
@@ -72,9 +70,7 @@ delete:
     content:
       application/json:
         schema:
-          type: array
-          items:
-            $ref: "../schemas/admin/UserPermissionType.yaml"
+          $ref: "../schemas/admin/UserPermissionType.yaml"
   responses:
     "200":
       description: "Successfully deleted user permissions"
