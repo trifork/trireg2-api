@@ -1,0 +1,8 @@
+type: "object"
+required: ["userId", "relationType"]
+properties:
+  userId:
+    type: "integer"
+    format: "int64"
+  relationType:
+    $ref: "UserGroupRelationType.yaml"

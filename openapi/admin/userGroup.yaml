@@ -26,7 +26,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: "../schemas/admin/UserGroupCreateRequest.yaml"
+          $ref: "../schemas/admin/UserGroupData.yaml"
   responses:
     "200":
       description: "User group was successfully created"
@@ -56,7 +56,7 @@ put:
     content:
       application/json:
         schema:
-          $ref: "../schemas/admin/UserGroupCreateRequest.yaml"
+          $ref: "../schemas/admin/UserGroupData.yaml"
   responses:
     "200":
       description: "User group was successfully updated"

@@ -24,7 +24,7 @@ tags:
     description: "Tag for CRUD operations related to the configuration of tasks"
   - name: "UserGroup"
     description: "Tag for CRUD operations related to the configuration of user groups"
-  - name: "UserGroupManagement"
+  - name: "UserGroupRelation"
     description: "Tag for CRUD operations related to managing users and their relation to user groups"
   - name: "UserPermission"
     description: "Tag for CRUD operations related to the configuration of user permissions"
@@ -38,7 +38,7 @@ paths:
   /user/permission:
     $ref: admin/userPermission.yaml
   /user-group/user:
-    $ref: "admin/userGroupAdministration.yaml"
+    $ref: "admin/userGroupRelation.yaml"
   /user-group:
     $ref: "admin/userGroup.yaml"
 components:

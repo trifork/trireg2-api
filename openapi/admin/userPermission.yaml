@@ -45,11 +45,11 @@ post:
       $ref: "../schemas/admin/UserPermissionType.yaml"
   responses:
     "200":
-      description: "Successfully fetched all user permissions"
+      description: "Successfully added user permission"
       content:
         application/json:
           schema:
-            $ref: "../schemas/DefaultCreateResponse.yaml"
+            $ref: "../schemas/DefaultMessageResponse.yaml"
     "401":
       $ref: "../responses/UnauthorizedError.yaml"
     "403":
@@ -75,11 +75,11 @@ delete:
       $ref: "../schemas/admin/UserPermissionType.yaml"
   responses:
     "200":
-      description: "Successfully deleted user permissions"
+      description: "Successfully deleted user permission"
       content:
         application/json:
           schema:
-            $ref: "../schemas/DefaultDeleteResponse.yaml"
+            $ref: "../schemas/DefaultMessageResponse.yaml"
     "401":
       $ref: "../responses/UnauthorizedError.yaml"
     "403":

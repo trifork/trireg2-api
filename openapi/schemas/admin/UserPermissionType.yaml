@@ -13,5 +13,5 @@ description: >
   * `ModifyTasks` - User is allowed to create, edit, update, and delete tasks
   * `ModifyGroups` - User is a allowed to modify create, modify, and update user groups
   * `ModifyPermissions` - User is allowed to add and remove permissions from a user
-  * `ReadAll` - User can read data on all users
-  * `WriteAll` - User can read and write data on all users
+  * `ReadAll` - User can read data registered by all users
+  * `WriteAll` - User can read and write data registered by all users

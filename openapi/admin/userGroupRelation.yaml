@@ -1,6 +1,6 @@
 get:
   tags:
-  - "UserGroupManagement"
+  - "UserGroupRelation"
   operationId: "getUsersInGroup"
   description: "Gets all users in a user group"
   parameters:
@@ -17,7 +17,9 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../schemas/admin/UserGroupRelations.yaml"
+            type: "array"
+            items:
+              $ref: "../schemas/admin/UserGroupRelation.yaml"
     "401":
       $ref: "../responses/UnauthorizedError.yaml"
     "403":
@@ -39,7 +41,7 @@ post:
       content:
         application/json:
           schema:
-            $ref: "../schemas/DefaultCreateResponse.yaml"
+            $ref: "../schemas/DefaultMessageResponse.yaml"
     "401":
       $ref: "../responses/UnauthorizedError.yaml"
     "403":
@@ -48,7 +50,7 @@ put:
   tags:
   - "UserGroupManagement"
   operationId: "updateUserRelationToUserGroup"
-  description: "Add a user to a user group"
+  description: "Updates a user relation to a user group"
   requestBody:
     required: true
     content:
@@ -61,7 +63,7 @@ put:
       content:
         application/json:
           schema:
-            $ref: "../schemas/DefaultUpdateResponse.yaml"
+            $ref: "../schemas/DefaultMessageResponse.yaml"
     "401":
       $ref: "../responses/UnauthorizedError.yaml"
     "403":
@@ -92,7 +94,7 @@ delete:
       content:
         application/json:
           schema:
-            $ref: "../schemas/DefaultDeleteResponse.yaml"
+            $ref: "../schemas/DefaultMessageResponse.yaml"
     "401":
       $ref: "../responses/UnauthorizedError.yaml"
     "403":
