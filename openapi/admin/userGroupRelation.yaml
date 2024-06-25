@@ -26,7 +26,7 @@ get:
       $ref: "../responses/ForbiddenError.yaml"
 post:
   tags:
-  - "UserGroupManagement"
+  - "UserGroupRelation"
   operationId: "addUserToUserGroup"
   description: "Add a user to a user group"
   requestBody:
@@ -48,7 +48,7 @@ post:
       $ref: "../responses/ForbiddenError.yaml"
 put:
   tags:
-  - "UserGroupManagement"
+  - "UserGroupRelation"
   operationId: "updateUserRelationToUserGroup"
   description: "Updates a user relation to a user group"
   requestBody:
@@ -70,7 +70,7 @@ put:
       $ref: "../responses/ForbiddenError.yaml"
 delete:
   tags:
-  - "UserGroupManagement"
+  - "UserGroupRelation"
   operationId: "deleteUserFromUserGroup"
   description: "Remove a user from a user group"
   parameters:
