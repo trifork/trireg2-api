@@ -20,5 +20,4 @@ properties:
   duration:
     $ref: ../Duration.yaml
   status:
-    description: "Describes the status of the time registration"
-    type: string 
+    $ref: TimeRegistrationStatus.yaml

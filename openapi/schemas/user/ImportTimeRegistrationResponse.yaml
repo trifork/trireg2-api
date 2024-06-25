@@ -6,8 +6,7 @@ items:
       type: "integer"
       format: "int64"
     status:
-      type: "string"
-      description: "Describes the status of importing the time registration (SUCCESS, PENDING, FAILED)"
+      $ref: "ImportTimeRegistrationStatus.yaml"
     message:
       description: "Provides a description of the import status"
       type: "string"
