@@ -8,8 +8,8 @@ enum:
 description: >
   The status of a time registration
   Valid values:
-  * `valid` - The registration is valid
-  * `pending` - The registration is valid as such, but is waiting the approval of the user. If this happens, it will become 'valid'. If it is rejected, it will become 'rejected'.
-  * `invalid` - Something is wrong with the registration, it will need correction before it can become valid
-  * `deleted` - The registration has existed at some point, but has now been deleted
-  * `rejected` - The registration has been rejected by the user
+  * `valid` - The time registration is valid
+  * `pending` - The time registration is valid as such, but is awaiting the approval of the user. If this happens, it will become 'valid'. If it is rejected, it will become 'rejected'.
+  * `invalid` - Something is wrong with the time registration, it will need correction before it can become valid
+  * `deleted` - The time registration has existed at some point, but has now been deleted
+  * `rejected` - The time registration has been rejected by the user
