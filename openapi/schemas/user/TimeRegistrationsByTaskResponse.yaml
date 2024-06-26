@@ -28,5 +28,4 @@ items:
           duration:
             $ref: ../Duration.yaml
           status:
-            description: "Describes the status of the time registration (PENDING, VALID, INVALID)"
-            type: string
+            $ref: TimeRegistrationStatus.yaml
