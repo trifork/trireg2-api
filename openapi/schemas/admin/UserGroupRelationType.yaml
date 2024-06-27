@@ -1,0 +1,15 @@
+type: "string"
+enum:
+  - "Member"
+  - "MemberReader"
+  - "MemberWriter"
+  - "MemberProtectedReader"
+  - "MemberProtectedWriter"
+description: >
+  Describes a user's relation to a user group
+  Valid values:
+  * `Member` - Ordinary relation to the user group with no special rights
+  * `MemberReader` - User is a member of the group and is allowed to read data of other members
+  * `MemberWriter` - User is a member of the group and is allowed to read and write data of other members
+  * `MemberProtectedReader` - User is a member of the group and is allowed to read data of other members while own data cannot be read/written by others in the group
+  * `MemberProtectedWriter` - User is a member of the group and is allowed to read and write data of other members while own data cannot be read/written by others in the group

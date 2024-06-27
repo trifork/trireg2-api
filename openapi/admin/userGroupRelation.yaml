@@ -1,0 +1,101 @@
+get:
+  tags:
+  - "UserGroupRelation"
+  operationId: "getUsersInGroup"
+  description: "Gets all users in a user group"
+  parameters:
+  - name: "userGroupId"
+    description: "ID of the user group to get users for"
+    in: "query"
+    required: true
+    schema:
+      type: "integer"
+      format: "int64"
+  responses:
+    "200":
+      description: "User group relations for the specified user group"
+      content:
+        application/json:
+          schema:
+            type: "array"
+            items:
+              $ref: "../schemas/admin/UserGroupRelation.yaml"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+    "403":
+      $ref: "../responses/ForbiddenError.yaml"
+post:
+  tags:
+  - "UserGroupRelation"
+  operationId: "addUserToUserGroup"
+  description: "Add a user to a user group"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/admin/UserGroupRelationCreateRequest.yaml"
+  responses:
+    "200":
+      description: "User group relation for user was successfully created"
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/DefaultMessageResponse.yaml"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+    "403":
+      $ref: "../responses/ForbiddenError.yaml"
+put:
+  tags:
+  - "UserGroupRelation"
+  operationId: "updateUserRelationToUserGroup"
+  description: "Updates a user relation to a user group"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/admin/UserGroupRelationCreateRequest.yaml"
+  responses:
+    "200":
+      description: "User group relation for user was successfully updated"
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/DefaultMessageResponse.yaml"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+    "403":
+      $ref: "../responses/ForbiddenError.yaml"
+delete:
+  tags:
+  - "UserGroupRelation"
+  operationId: "deleteUserFromUserGroup"
+  description: "Remove a user from a user group"
+  parameters:
+  - name: "userId"
+    description: "ID of the user to remove from the user group"
+    in: "query"
+    required: true
+    schema:
+      type: "integer"
+      format: "int64"
+  - name: "userGroupId"
+    description: "ID of the user group to remove user from"
+    in: "query"
+    required: true
+    schema:
+      type: "integer"
+      format: "int64"
+  responses:
+    "200":
+      description: "User group relation for successfully deleted"
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/DefaultMessageResponse.yaml"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+    "403":
+      $ref: "../responses/ForbiddenError.yaml"

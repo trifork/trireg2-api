@@ -21,14 +21,26 @@ tags:
   - name: "TagTaskMapping"
     description: "Tag for CRUD operations related to the configuration of the relation between tasks and tag configurations"
   - name: "Task"
-    description: "Tag for CRUD operations related to the configuration of tasks"  
+    description: "Tag for CRUD operations related to the configuration of tasks"
+  - name: "UserGroup"
+    description: "Tag for CRUD operations related to the configuration of user groups"
+  - name: "UserGroupRelation"
+    description: "Tag for CRUD operations related to managing users and their relation to user groups"
+  - name: "UserPermission"
+    description: "Tag for CRUD operations related to the configuration of user permissions"
 paths:
   /task:
-    $ref: admin/task.yaml
+    $ref: "admin/task.yaml"
   /config/tag:
-    $ref: admin/tagConfiguration.yaml
+    $ref: "admin/tagConfiguration.yaml"
   /config/task-tag:
-    $ref: admin/tagTaskMapping.yaml
+    $ref: "admin/tagTaskMapping.yaml"
+  /user/permission:
+    $ref: admin/userPermission.yaml
+  /user-group/user:
+    $ref: "admin/userGroupRelation.yaml"
+  /user-group:
+    $ref: "admin/userGroup.yaml"
 components:
   securitySchemes:
     openId:

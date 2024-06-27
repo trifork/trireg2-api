@@ -56,6 +56,8 @@ post:
             type: "string"
     "401":
       $ref: "../responses/UnauthorizedError.yaml"
+    "403":
+      $ref: "../responses/ForbiddenError.yaml"
 put:
   tags:
     - "TagTaskMapping"
@@ -90,6 +92,8 @@ put:
             type: "string"
     "401":
       $ref: "../responses/UnauthorizedError.yaml"
+    "403":
+      $ref: "../responses/ForbiddenError.yaml"
     "404":
       description: "The specified relation was not found"
       content:

@@ -1,0 +1,11 @@
+type: "object"
+required: ["userId", "userGroupId", "userGroupRelation"]
+properties:
+  userId:
+    type: "integer"
+    format: "int64"
+  userGroupId:
+    type: "integer"
+    format: "int64"
+  userGroupRelation:
+    $ref: "UserGroupRelationType.yaml"
