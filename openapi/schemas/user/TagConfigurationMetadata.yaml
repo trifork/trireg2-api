@@ -1,0 +1,40 @@
+type: "object"
+description: | 
+  Metadata for a tag configuration in the context of a specific time registration. This can differ based on the task the
+  time registration is associated to, so a tag that is optional for one time registration can be mandatory for another.
+required: ["tagConfigurationId", "tagConfigurationName", "cardinality", "valueType"]
+properties:
+  tagConfigurationId:
+    type: "integer"
+    format: "int64"
+    description: "An identifier for this tag configuration"
+  tagConfigurationName:
+    type: "string"
+    description: "The name of the tag configuration"
+  tagConfigurationDescription:
+    type: "string"
+    description: "An optional description of the tag configuration"
+  cardinality:
+    type: "string"
+    enum:
+      - "optional"
+      - "mandatory"
+      - "managed"
+    description: >
+      The status of a time registration
+      Valid values:
+      * `optional` - The tag can be added to this time registration, but it is not required.
+      * `mandatory` - The tag must be added to this time registration.
+      * `managed` - The tag is managed by administrator configuration. It is read-only and can't be changed.
+  valueType:
+    type: "string"
+    enum:
+      - "string"
+      - "bool"
+      - "int"
+    description: >
+      The value type of this configuration
+      Valid values:
+      * `string` - The tag value can be any string
+      * `bool` - The tag value must be a boolean on the form 'true' or 'false' (case insensitive)
+      * `int` - The tag value must be a valid 32-bit integer

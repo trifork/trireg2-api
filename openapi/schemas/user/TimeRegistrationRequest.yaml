@@ -12,6 +12,4 @@ properties:
   tags:
     type: array
     items:
-      $ref: TagConfiguration.yaml
-    
-   
+      $ref: TagTimeRegistrationRequest.yaml
