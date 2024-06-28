@@ -1,0 +1,13 @@
+type: object
+required: ["tagId", "tagValue"]
+description: "An existing tag with some value"
+properties:
+  tagId:
+    type: "integer"
+    format: "int64"
+    description: "The id of this tag"
+  tagValue:
+    type: "string"
+    description: |
+      The value of this tag. This is a valid value corresponding to the tag configuration. For example, if the tag 
+      configuration specifies that the tag is an integer, then the value is a valid integer.

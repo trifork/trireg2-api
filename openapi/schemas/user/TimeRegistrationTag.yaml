@@ -1,0 +1,11 @@
+type: "object"
+required: ["tagConfigurationMetadata"]
+description: |
+  Composite object with information about a potential tag for a time registration. This consists both of tags that has
+  been set, and tags that can potentially be set. Contains metadata describing the tag and the current tag value (if 
+  any). The 'tagValue' is null if no tag value has been set for the specific configuration.
+properties:
+  tagConfigurationMetadata:
+    $ref: "TagConfigurationMetadata.yaml"
+  tagValue:
+    $ref: "Tag.yaml"

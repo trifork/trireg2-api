@@ -2,7 +2,9 @@ get:
   tags:
     - "Tag"
   operationId: "getTimeRegistrationTags"
-  description: "Gets the tags associated with the given time registration"
+  description: |
+    Gets the tags associated with the specified time registration. This includes both the tags that have already been
+    added, and the ones that can be added.
   parameters:
     - in: query
       name: "timeRegistrationId"
@@ -13,13 +15,13 @@ get:
       description: "The ID of the time registration to get tags for"
   responses:
     "200":
-      description: "List of tags for the requested time registration"
+      description: "List of tags for the requested time registration, both existing and available to add"
       content:
         application/json:
           schema:
             type: array
             items:
-              $ref: "../schemas/admin/TagTimeRegistrationResponse.yaml"
+              $ref: "../schemas/user/TimeRegistrationTag.yaml"
     "401":
       $ref: "../responses/UnauthorizedError.yaml"
     "404":
@@ -30,17 +32,25 @@ post:
   tags:
     - "Tag"
   operationId: "tagTimeRegistration"
-  description: "Tags a time registration with a specified tag and optional tag value"
+  description: "Tags a time registration with a specified tag and tag value"
+  parameters:
+    - in: query
+      name: "timeRegistrationId"
+      schema:
+        type: "integer"
+        format: "int64"
+      required: true
+      description: "The ID of the time registration to add a tag to"
   requestBody:
     description: "A JSON object containing tag information"
     required: true
     content:
       application/json:
         schema:
-          $ref: "../schemas/admin/TagTimeRegistrationRequest.yaml"
+          $ref: "../schemas/user/TagTimeRegistrationRequest.yaml"
   responses:
     "200":
-      description: "Tag was successfully added to the time registration"
+      description: "Tag was successfully added to the time registration. The response contains the id of the new tag"
       content:
         application/json:
           schema:
@@ -64,14 +74,7 @@ put:
     content:
       application/json:
         schema:
-          type: "object"
-          required: ["tagId", "value"]
-          properties:
-            tagId:
-              type: "integer"
-              format: "int64"
-            value:
-              type: "string"
+          $ref: "../schemas/user/Tag.yaml"
   responses:
     "200":
       description: "Tag was successfully updated"
