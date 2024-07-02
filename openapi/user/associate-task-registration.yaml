@@ -1,4 +1,9 @@
 post:
+  tags:
+    - "TimeRegistration"
+  description: |
+    Associates a time registration - that currently does not have any task associated - to the specified task.
+    Also accepts tags that may be required to make a valid time registration for the specified task.
   operationId: "associateTimeRegistrationWithTask"
   requestBody:
     required: true
