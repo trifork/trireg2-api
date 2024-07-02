@@ -1,5 +1,5 @@
 type: "object"
-required: ["timeRegistrationId", "registered", "userId", "taskId", "date", "duration", "status"]
+required: ["timeRegistrationId", "registered", "userId", "taskId", "date", "duration", "status", "tags"]
 properties:
   timeRegistrationId:
     type: "integer"
@@ -21,3 +21,7 @@ properties:
     $ref: ../Duration.yaml
   status:
     $ref: TimeRegistrationStatus.yaml
+  tags:
+    type: array
+    items:
+      $ref: "TimeRegistrationTag.yaml"
