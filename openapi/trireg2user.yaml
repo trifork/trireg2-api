@@ -33,6 +33,8 @@ paths:
     $ref: user/time-registration.yaml
   /time-registration/active-task:
     $ref: user/active-task-registrations.yaml
+  /time-registration/associate-task:
+    $ref: user/associate-task-registration.yaml
   /time-registration/bulk:
     $ref: user/time-registration-bulk.yaml
   /export:
