@@ -14,6 +14,6 @@ properties:
   value:
     type: "string"
     description: |
-      The value to set for the tag configuration. This is a string, but the format, but the format of the string is 
-      dependent on the tag configuration. For example, if the configuration specifies that the tag is an integer, then
-      the string value must be a valid integer.
+      The value to set for the tag configuration. This is a string, but the format of the string is dependent on the tag
+      configuration. For example, if the configuration specifies that the tag is an integer, then the string value must
+      be a valid integer.
