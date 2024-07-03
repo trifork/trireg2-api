@@ -1,5 +1,5 @@
 type: "object"
-required: ["timeRegistrationId", "registered", "userId", "taskId", "date", "duration", "status", "tags"]
+required: ["timeRegistrationId", "registered", "userId", "date", "duration", "status", "tags"]
 properties:
   timeRegistrationId:
     type: "integer"
