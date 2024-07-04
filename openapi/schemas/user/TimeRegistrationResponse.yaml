@@ -25,3 +25,5 @@ properties:
     type: array
     items:
       $ref: "TimeRegistrationTag.yaml"
+  description:
+    type: "string"
