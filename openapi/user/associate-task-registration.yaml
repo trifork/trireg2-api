@@ -30,6 +30,12 @@ post:
         text/plain:
           schema:
             type: "string"
+          examples:
+            existing-association:
+              description: |
+                Error message when trying to associate a time registration that has already been associated with a task 
+                Will also return this message when trying to associate to the already associated task
+              value: "Cannot associate a time registration with an existing time registration"
     "401":
       $ref: "../responses/UnauthorizedError.yaml"
     "404":

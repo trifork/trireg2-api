@@ -1,6 +1,6 @@
 type: "array"
 items:
-  required: ["userId", "taskId", "date", "duration", "tags"]
+  required: ["userId", "date", "duration", "tags"]
   properties:
     userId:
       type: "integer"

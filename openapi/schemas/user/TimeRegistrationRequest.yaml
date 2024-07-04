@@ -1,5 +1,5 @@
 type: "object"
-required: ["taskId", "date", "duration"]
+required: ["date", "duration"]
 properties:
   taskId:
     type: "integer"
