@@ -17,3 +17,5 @@ items:
       type: array
       items:
         $ref: TagTimeRegistrationRequest.yaml
+    description:
+      type: "string"
