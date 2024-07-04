@@ -1,0 +1,13 @@
+type: "object"
+required: ["timeRegistrationId", "taskId", "tags"]
+properties:
+  timeRegistrationId:
+    type: "integer"
+    format: "int64"
+  taskId:
+    type: "integer"
+    format: "int64"
+  tags:
+    type: array
+    items:
+      $ref: TagTimeRegistrationRequest.yaml

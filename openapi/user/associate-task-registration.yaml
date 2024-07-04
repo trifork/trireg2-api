@@ -1,0 +1,46 @@
+post:
+  tags:
+    - "TimeRegistration"
+  description: |
+    Associates a time registration - that currently does not have any task associated - to the specified task.
+    Also accepts tags that may be required to make a valid time registration for the specified task.
+  operationId: "associateTimeRegistrationWithTask"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/user/TimeRegistrationAssociateTaskRequest.yaml"
+  responses:
+    "200":
+      description: "associated"
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/DefaultUpdateResponse.yaml"
+          examples:
+            success-associated:
+              value: {
+                "id": 12345,
+                "status": "The time registration was successfully associated with task"
+              }
+    "400":
+      description: "Bad associate request"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+          examples:
+            existing-association:
+              description: |
+                Error message when trying to associate a time registration that has already been associated with a task 
+                Will also return this message when trying to associate to the already associated task
+              value: "Cannot associate a time registration with an existing time registration"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+    "404":
+      description: "Time registration not found"
+      content:
+        text/plain:
+          schema:
+            type: "string"

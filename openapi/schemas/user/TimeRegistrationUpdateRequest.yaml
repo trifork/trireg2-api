@@ -7,3 +7,5 @@ properties:
     $ref: ../Duration.yaml
   status:
     $ref: TimeRegistrationStatus.yaml
+  description:
+    type: "string"
