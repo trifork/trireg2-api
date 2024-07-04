@@ -4,6 +4,9 @@ properties:
   taskId:
     type: "integer"
     format: "int64"
+    description: |
+      Associates the time registration with a task.
+      If not specified, then the `description` field must be a non-null value
   date:
     type: "string"
     format: "date"
@@ -13,3 +16,5 @@ properties:
     type: array
     items:
       $ref: TagTimeRegistrationRequest.yaml
+  description:
+    type: "string"
