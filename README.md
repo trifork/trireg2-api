@@ -39,6 +39,28 @@ The API is protected using the following security schemes:
 
 Note!! The Basic Auth security scheme is only a temporary option to be used during Hackerdays on May 13.
 
+### Tagging and Time Registrations
+
+The API provides several endpoints for the registration and updating of time entries. 
+A time registration is an entity consisting of a time amount, date, the individual who made the registration, and optionally, a description of the activity performed.
+
+Time registrations, however, are not standalone entities and often require additional context to be meaningful. 
+To address this, the concept of tagging is utilized. By associating a time registration with a task, it is possible to append tags that provide necessary supplementary information.
+
+A tag is defined by a name, description, and a value that can be of various types.
+
+There are three distinct categories of tags that can be associated with a time registration:
+
+- **Mandatory Tags**:
+  These tags are required for every time registration. For example, a tag named `Billable` with a value of `true` or `false` might be used to indicate whether the time is billable.
+- **Optional Tags**:
+  These tags are not required and can be freely added, omitted, or updated. An example would be an `IssueID` tag used to reference a Jira issue ID when logging time for a support case or bug fix.
+- **Auto/Hidden Tags**:
+  These tags are automatically added and are not visible to the user making the time registration. An example could be a `Customer` tag that includes the customer's name. This information may be valuable for upstream ERP systems when exporting data.
+
+It is important to note that **mandatory tags** and **optional tags** can overlap. 
+An administrator has the flexibility to designate a tag as optional for one task and mandatory for another.
+
 ### Download the API
 
 Download the latest version of the OpenAPI spec as a zip file from Github Artifacts for the given release, which can be found from the `Actions` tab. Select the latest release and find the `Artifacts` section at the bottom of the page.
