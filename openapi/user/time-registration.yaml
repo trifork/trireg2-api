@@ -18,7 +18,9 @@ post:
   tags:
   - "TimeRegistration"
   operationId: "addTimeRegistrationForUser"
-  description: "Adds a time registration for a user"
+  description: |
+    Creates a new time registration associated with a task.
+    It is allowed to register time without a task, leaving it in a pending state.
   requestBody:
     description: "A JSON object containing time registration information"
     required: true
@@ -45,7 +47,10 @@ put:
   tags:
     - "TimeRegistration"
   operationId: "updateTimeRegistrationForUser"
-  description: "Updates the specified time registration"
+  description: |
+    Updates the specified time registration with the new duration, date, or description.
+    This endpoint can also be used to accept/reject pending time registrations.
+    It is not possible to update invalid time registrations to be valid.
   parameters:
     - name: "timeRegistrationId"
       in: "query"
@@ -91,7 +96,9 @@ delete:
   tags:
     - "TimeRegistration"
   operationId: "deleteTimeRegistration"
-  description: "Deletes the specified time registration"
+  description: |
+    Marks the specified time registration as `deleted`. If the time registration is in a `pending` state, the time registration will
+    be marked as `rejected`.
   parameters:
     - name: "timeRegistrationId"
       in: "query"
