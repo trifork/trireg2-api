@@ -2,9 +2,9 @@ post:
   tags:
     - "TimeRegistration"
   operationId: "addBulkTimeRegistrationForUser"
-  description: "Add several time registrations for a user"
+  description: "Add multiple time registrations for the calling user"
   requestBody:
-    description: "A JSON object containing a list of time registration information"
+    description: "A JSON object containing an array of time registration details for the user"
     required: true
     content:
       application/json:
@@ -34,7 +34,7 @@ post:
                 }
               ]
     "400":
-      description: "Failed creating one or more time registrations - if one time registration failed, no time registration is saved"
+      description: "One or more time registrations failed. If any registration fails, none of the registrations will be saved"
       content:
         text/plain:
           schema:

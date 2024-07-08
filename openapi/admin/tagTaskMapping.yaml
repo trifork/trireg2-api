@@ -2,7 +2,7 @@ get:
   tags:
     - "TagTaskMapping"
   operationId: "getTagTaskMappings"
-  description: "Gets all tag configurations that are associated to the provided task"
+  description: "Gets all tag configurations that are associated with the provided task"
   parameters:
     - name: "taskId"
       in: "query"
@@ -62,7 +62,8 @@ put:
   tags:
     - "TagTaskMapping"
   operationId: "updateTagTaskMapping"
-  description: "Updates a relation between a task and a tag configuration"
+  description: |
+    Updates a relation between a task and a tag configuration. The relation itself (tag<->task) cannot be changed
   parameters:
     - name: "tagTaskMappingId"
       in: "query"
