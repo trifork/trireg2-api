@@ -6,6 +6,6 @@ properties:
   taskDescription:
     type: "string"
     description: "An optional description of the task"
-  taskKMEligible:
+  taskKmEligible:
     type: "boolean"
     description: "Marks if the task allows for registration of kilometres"
