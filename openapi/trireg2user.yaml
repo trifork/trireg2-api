@@ -20,6 +20,8 @@ tags:
     description: "Tag for operations related to exporting time registrations to an external system"
   - name: "Import"
     description: "Tag for operations related to importing time registrations"
+  - name: "KmRegistration"
+    description: "Tag for CRUD operations related to kilometre registration"
   - name: "Login"
     description: "Tag for operations related to logging into the service through a web browser"
   - name: "Tag"
@@ -37,6 +39,8 @@ paths:
     $ref: user/associate-task-registration.yaml
   /time-registration/bulk:
     $ref: user/time-registration-bulk.yaml
+  /km-registration:
+    $ref: user/km-registration.yaml
   /export:
     $ref: user/export.yaml
   /tag:

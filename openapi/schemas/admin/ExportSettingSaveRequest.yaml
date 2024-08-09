@@ -1,0 +1,13 @@
+type: "object"
+required: ["exportSettingKey"]
+description: |
+  A request to save a single export setting with the key 'exportSettingKey'. If no value has currently been set for the
+  key, this will create a setting. If a value was already set, this will overwrite that value. If 'exportSettingValue' is
+  null, the setting will be deleted.
+properties:
+  exportSettingKey:
+    type: "string"
+    description: "The key of the export setting to set a value for."
+  exportSettingValue:
+    type: "string"
+    description: "The value to set for the export setting. If null, the setting with the 'exportSettingKey' will be deleted"

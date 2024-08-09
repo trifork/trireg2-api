@@ -1,0 +1,18 @@
+type: "object"
+properties:
+  date:
+    type: "string"
+    format: "date"
+  from:
+    type: "string"
+  to:
+    type: "string"
+  km:
+    type: "integer"
+  status:
+    type: "string"
+    enum:
+      - "approve"
+      - "reject"
+      - "pending"
+    default: "pending"

@@ -1,0 +1,11 @@
+type: "string"
+description: >
+  An enumeration of the different types of export settings.
+  Valid values:
+  * `int64` - A 64 bit integer.
+  * `string` - A string.
+  * `uri` - A Uniform Resource Locator.
+enum:
+  - "int64"
+  - "string"
+  - "url"

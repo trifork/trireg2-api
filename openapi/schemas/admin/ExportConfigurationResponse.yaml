@@ -1,0 +1,16 @@
+type: "object"
+required: ["exportSystemId", "settings", "isValid"]
+description: |
+  An export configuration for an export system. Contains all the individual settings that can be configured, regardless
+  if they are currently set. Also contains a validity state for the entire collection of settings.
+properties:
+  exportSystemId:
+    type: "string"
+    description: "An identifier for the export system that this configuration belongs to."
+  settings:
+    type: "array"
+    items:
+      $ref: "ExportSettingResponse.yaml"
+  isValid:
+    type: "boolean"
+    description: "Whether this configuration is valid."

@@ -1,0 +1,152 @@
+get:
+  tags:
+    - "KmRegistration"
+  operationId: "getKmRegistrationsForUser"
+  description: |
+    Gets all kilometre registrations made by the specified user
+  parameters:
+    - name: "userId"
+      in: "query"
+      description: "The id of the user to get kilometre registrations data for"
+      required: false
+      schema:
+        type: "integer"
+        format: "int64"
+  responses:
+    "200":
+      description: "Successfully fetched the kilometre registrations"
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../schemas/user/KmRegistration.yaml"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+    "404":
+      description: "User not found"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+post:
+  tags:
+    - "KmRegistration"
+  operationId: "createKmRegistration"
+  description: |
+    Registers a new kilometre registration with to/from details and how many kilometres were travelled
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/user/KmRegistrationRequest.yaml"
+  responses:
+    "201":
+      description: "Successfully created the kilometre registration"
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/DefaultCreateResponse.yaml"
+          examples:
+            Success:
+              value: {
+                "id": 12345,
+                "status": "Km registration created successfully"
+              }
+    "400":
+      description: "Bad create request"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+put:
+  tags:
+    - "KmRegistration"
+  operationId: "updateKmRegistration"
+  description: |
+    Updates an existing kilometre registration with to/from details and how many kilometres were travelled
+  parameters:
+    - name: "kmRegistrationId"
+      in: "query"
+      description: "The id of the kilometre registrations to update"
+      required: true
+      schema:
+        type: "integer"
+        format: "int64"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/user/KmRegistrationUpdateRequest.yaml"
+  responses:
+    "200":
+      description: "Successfully updated the kilometre registration"
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/DefaultUpdateResponse.yaml"
+          examples:
+            Success:
+              value: {
+                "id": 12345,
+                "status": "Km registration updated successfully"
+              }
+    "400":
+      description: "Bad update request"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+    "404":
+      description: "Kilometre registration not found"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+delete:
+  tags:
+    - "KmRegistration"
+  operationId: "deleteKmRegistration"
+  description: |
+    Deletes or rejects a kilometre registration.
+  parameters:
+    - name: "kmRegistrationId"
+      in: "query"
+      description: "The id of the kilometre registrations to update"
+      required: true
+      schema:
+        type: "integer"
+        format: "int64"
+  responses:
+    "200":
+      description: "Successfully deleted or rejected a kilometre registration"
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/DefaultDeleteResponse.yaml"
+          examples:
+            success-deleted:
+              value: {
+                "id": 12345,
+                "status": "The kilometre registration was deleted successfully"
+              }
+    "400":
+      description: "Bad delete request"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+    "404":
+      description: "Kilometre registration not found"
+      content:
+        text/plain:
+          schema:
+            type: "string"
