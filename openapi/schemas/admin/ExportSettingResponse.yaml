@@ -1,0 +1,20 @@
+type: "object"
+required: ["exportSettingKey", "exportSettingDescription", "exportSettingValueType", "isValid"]
+description: |
+  A single export setting within an export configuration. This is a key-value pair, where the key is unique within the 
+  export system, and the value is represented as a string, but can have requirements on the format.
+properties:
+  exportSettingKey:
+    type: "string"
+    description: "The key of this export setting. This is unique within the export system."
+  exportSettingValue:
+    type: "string"
+    description: "The current value for this export setting. Can be null if it has not been set."
+  exportSettingDescription:
+    type: "string"
+    description: "A description of this export setting"
+  exportSettingValueType:
+    $ref: "ExportSettingValueType.yaml"
+  isValid:
+    type: "boolean"
+    description: "Whether the current value for this export setting is valid."
