@@ -1,0 +1,68 @@
+get:
+  tags:
+    - "ExportConfiguration"
+  operationId: "getExportConfiguration"
+  description: |
+    Gets the export configurations for the specified export system. 
+    This is essentially a key-value mapping of the different settings that can be configured for the export system.
+  parameters:
+    - name: "exportSystemId"
+      in: "query"
+      required: true
+      description: "The id of the export system to get configurations for."
+      schema:
+        type: "string"
+  responses:
+    "200":
+      description: "The export configuration for the specified export system."
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/admin/ExportConfigurationResponse.yaml"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+    "404":
+      description: "Unable to find the configuration for the parameters (e.g. no configuration exists for the specified id)"
+post:
+  tags:
+    - "ExportConfiguration"
+  operationId: "saveExportConfiguration"
+  description: |
+    Saves one or more export settings for the specified export system. This will only change values for the settings 
+    that are included in the request. If a setting is not included, it will not be changed. Saving a setting with an
+    invalid value, e.g. a wrong format, will not cause an error, but the setting will be marked as invalid and the
+    resulting export configuration can't be used.
+  parameters:
+    - name: "exportSystemId"
+      in: "query"
+      required: true
+      description: "The id of the export system to save configurations for."
+      schema:
+        type: "string"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: "array"
+          items:
+            $ref: "../schemas/admin/ExportSettingSaveRequest.yaml"
+  responses:
+    "200":
+      description: "The tag configuration was successfully created"
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/admin/ExportConfigurationResponse.yaml"
+    "400":
+      description: "Request contains invalid data. The export settings were not saved"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"
+    "403":
+      $ref: "../responses/ForbiddenError.yaml"
+    "404":
+      description: "Unable to find the configuration for the parameters (e.g. no configuration exists for the specified id)"
