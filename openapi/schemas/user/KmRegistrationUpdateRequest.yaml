@@ -12,7 +12,7 @@ properties:
   status:
     type: "string"
     enum:
-      - "approve"
-      - "reject"
-      - "pending"
-    default: "pending"
+      - "APPROVE"
+      - "REJECT"
+      - "PENDING"
+    default: "PENDING"
