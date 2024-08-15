@@ -1,0 +1,15 @@
+type: "object"
+required: ["taskId", "date", "from", "to", "km"]
+properties:
+  taskId:
+    type: "integer"
+    format: "int64"
+  date:
+    type: "string"
+    format: "date"
+  from:
+    type: "string"
+  to:
+    type: "string"
+  km:
+    type: "integer"
