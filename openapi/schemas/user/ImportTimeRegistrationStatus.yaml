@@ -1,11 +1,11 @@
 type: "string"
 enum:
-  - "valid"
-  - "pending"
-  - "failed"
+  - "VALID"
+  - "PENDING"
+  - "FAILED"
 description: >
   The status of importing a time registration
   Valid values:
-  * `valid` - The time registration is valid and has been imported successfully
-  * `pending` - The time registration is valid, but is awaiting the approval of the user. Used when a user imports data for another user.
-  * `failed` - Something is wrong with the time registration, it has not been imported.
+  * `VALID` - The time registration is valid and has been imported successfully
+  * `PENDING` - The time registration is valid, but is awaiting the approval of the user. Used when a user imports data for another user.
+  * `FAILED` - Something is wrong with the time registration, it has not been imported.
