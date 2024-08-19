@@ -1,0 +1,11 @@
+type: "string"
+description: >
+  A period of time that an overview is covering
+  Valid values:
+      * `day` - Covers a specific date
+      * `week` - Covers the whole week (Monday to Sunday) of a specific date
+      * `month` - Covers the whole month of a specific date
+enum:
+  - "DAY"
+  - "WEEK"
+  - "MONTH"
