@@ -1,0 +1,16 @@
+type: object
+required: ["taskDescription", "dailyRegistrations"]
+description: |
+  Time registrations without a task association. These are grouped by description and subsequently days in the search
+  interval, where the registrations for each day can be empty. For example: lets assume a user has performed a taskless
+  time registration with comment "Working on the Project" on Tuesday and one time registration with the same comment on
+  Thursday in some week. If that week is queried, then the response will contain an entry with 'taskDescription' = 
+  "Working on the Project", and an array of 'dailyRegistration' with seven entries (Monday-Sunday). The Tuesday and
+  Thursday entries will contain one time registration, and the remaining five days will contain empty arrays.
+properties:
+  taskDescription:
+    type: string
+  dailyRegistrations:
+    type: array
+    items:
+      $ref: DayTimeRegistrations.yaml
