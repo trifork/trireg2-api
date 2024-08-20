@@ -7,5 +7,5 @@ description: |
 properties:
   tagConfigurationMetadata:
     $ref: "TagConfigurationMetadata.yaml"
-  tagValue:
-    $ref: "Tag.yaml"
+  tagRegistration:
+    $ref: "TagRegistration.yaml"
