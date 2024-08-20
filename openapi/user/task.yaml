@@ -1,0 +1,16 @@
+get:
+  tags:
+    - "Task"
+  operationId: "getTasksForUser"
+  description: "Gets the tasks available to the user"
+  responses:
+    "200":
+      description: "Successfully fetched the list of tasks available"
+      content:
+        application/json:
+          schema:
+            type: "array"
+            items:
+              $ref: "../schemas/user/TaskResponse.yaml"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"

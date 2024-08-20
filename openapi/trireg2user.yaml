@@ -28,6 +28,8 @@ tags:
     description: "Tag for CRUD operations related to adding tags to time registrations"
   - name: "TimeRegistration"
     description: "Tag for CRUD operations related to time registrations"
+  - name: "Task"
+    description: "Tag for operations related to tasks"
 paths:
   /login:
     $ref: user/login.yaml
@@ -47,6 +49,8 @@ paths:
     $ref: user/tag.yaml
   /import:
     $ref: user/import.yaml
+  /task:
+    $ref: user/task.yaml
 components:
   securitySchemes:
     openId:
