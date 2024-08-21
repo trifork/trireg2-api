@@ -17,6 +17,14 @@ get:
       in: query
       schema:
         $ref: "../schemas/user/OverviewPeriod.yaml"
+    - name: "extraTasks"
+      description: "An optional collection of extra tasks to include in the response, regardless of whether they are active or not"
+      in: query
+      schema:
+        type: array
+        items:
+          type: integer
+          format: int64
   responses:
     "200":
       description: "List of time registrations for the user grouped by task"
