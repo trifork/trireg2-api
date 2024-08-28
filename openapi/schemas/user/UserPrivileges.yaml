@@ -1,0 +1,32 @@
+type: "object"
+required: ["userId", "extraReadAccess", "extraWriteAccess", "permissions"]
+description: |
+  Contains information about the privileges of a user. All users have read/write access to their own data. Some users
+  have the rights to read and/or write data of other users, and some users have additional permissions to perform 
+  administrative tasks.
+properties:
+  userId:
+    type: "integer"
+    format: "int64"
+  extraReadAccess:
+    description: |
+      A set of additional users that this user has read access to. Will not include the user specified in 'userId', or 
+      the users in the 'extraWriteAccess' collection. Is empty if the user has no additional read access.
+    type: array
+    items:
+      $ref: "UserData.yaml"
+  extraWriteAccess:
+    description: |
+     A set of additional users that this user has write access to. Write access implies read access, so users in this
+     collection will not be included in the 'extraReadAccess' collection. Also, will not include the user specified in
+     'userId'. Is empty if the user has no additional write access.
+    type: array
+    items:
+      $ref: "UserData.yaml"
+  permissions:
+    description: |
+      The extra permissions granted to 'userId'. These grant access to the administrative functions of the system. Is
+      empty if the user has no additional permissions.
+    type: array
+    items:
+      $ref: "UserPermissionType.yaml"
