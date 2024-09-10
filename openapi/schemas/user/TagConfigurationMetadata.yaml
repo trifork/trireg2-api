@@ -17,24 +17,24 @@ properties:
   cardinality:
     type: "string"
     enum:
-      - "optional"
-      - "mandatory"
-      - "managed"
+      - "OPTIONAL"
+      - "MANDATORY"
+      - "MANAGED"
     description: >
       The status of a time registration
       Valid values:
-      * `optional` - The tag can be added to this time registration, but it is not required.
-      * `mandatory` - The tag must be added to this time registration.
-      * `managed` - The tag is managed by administrator configuration. It is read-only and can't be changed.
+      * `OPTIONAL` - The tag can be added to this time registration, but it is not required.
+      * `MANDATORY` - The tag must be added to this time registration.
+      * `MANAGED` - The tag is managed by administrator configuration. It is read-only and can't be changed.
   valueType:
     type: "string"
     enum:
-      - "string"
-      - "bool"
-      - "int"
+      - "STRING"
+      - "BOOL"
+      - "INT"
     description: >
       The value type of this configuration
       Valid values:
-      * `string` - The tag value can be any string
-      * `bool` - The tag value must be a boolean on the form 'true' or 'false' (case insensitive)
-      * `int` - The tag value must be a valid 32-bit integer
+      * `STRING` - The tag value can be any string
+      * `BOOL` - The tag value must be a boolean on the form 'true' or 'false' (case insensitive)
+      * `INT` - The tag value must be a valid 32-bit integer

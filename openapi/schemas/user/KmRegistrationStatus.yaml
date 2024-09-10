@@ -1,0 +1,7 @@
+type: "string"
+description: "Describes the status of the kilometre registration"
+enum:
+  - "PENDING"
+  - "ACCEPTED"
+  - "REJECTED"
+  - "DELETED"
