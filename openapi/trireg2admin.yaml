@@ -16,6 +16,8 @@ servers:
   - url: "http://0.0.0.0:8080"
     description: Local development server
 tags:
+  - name: "ExportConfiguration"
+    description: "Tag for CRUD operations related to the configuration of export systems"
   - name: "TagConfiguration"
     description: "Tag for CRUD operations related to the configuration of tags"
   - name: "TagTaskMapping"
@@ -35,6 +37,8 @@ paths:
     $ref: "admin/tagConfiguration.yaml"
   /config/task-tag:
     $ref: "admin/tagTaskMapping.yaml"
+  /config/export:
+    $ref: "admin/exportConfiguration.yaml"
   /user/permission:
     $ref: admin/userPermission.yaml
   /user-group/user:

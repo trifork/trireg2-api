@@ -1,0 +1,20 @@
+type: "object"
+required: ["kmRegistrationId", "taskId", "date", "from", "to", "km", "status"]
+properties:
+  kmRegistrationId:
+    type: "integer"
+    format: "int64"
+  taskId:
+    type: "integer"
+    format: "int64"
+  date:
+    type: "string"
+    format: "date"
+  from:
+    type: "string"
+  to:
+    type: "string"
+  km:
+    type: "integer"
+  status:
+    $ref: KmRegistrationStatus.yaml
