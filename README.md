@@ -42,7 +42,7 @@ Note!! The Basic Auth security scheme is only a temporary option to be used duri
 ### Tagging and Time Registrations
 
 The API provides several endpoints for creating and updating time registrations. 
-A time registration is an entity consisting of a time amount, date, the individual who made the registration, and optionally, a description of the activity performed.
+A time registration is an entity consisting of a time amount, a date, and the individual who made the registration. It can be associated to a task or have a description of the activity performed.
 
 Time registrations, however, are not standalone entities and often require additional context to be meaningful. 
 To address this, the concept of tagging is utilized. By associating a time registration with a task, it is possible to append tags that provide necessary supplementary information.
