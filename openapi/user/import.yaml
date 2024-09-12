@@ -4,7 +4,7 @@ post:
   operationId: "importTimeRegistrations"
   description: |
     Imports the given time registrations into the system.
-    When importing time registrations for the calling user, the import is treated as if normally creating a time registration.
+    When importing time registrations for the calling user, the import is treated as if normally creating the time registrations.
     When importing for another user, the time registrations are treated as suggestions and enters a pending state.
   requestBody:
     description: "A JSON object containing time registration information to be imported"
