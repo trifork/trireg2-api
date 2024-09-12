@@ -41,7 +41,7 @@ Note!! The Basic Auth security scheme is only a temporary option to be used duri
 
 ### Tagging and Time Registrations
 
-The API provides several endpoints for the registration and updating of time entries. 
+The API provides several endpoints for creating and updating time registrations. 
 A time registration is an entity consisting of a time amount, date, the individual who made the registration, and optionally, a description of the activity performed.
 
 Time registrations, however, are not standalone entities and often require additional context to be meaningful. 
