@@ -2,7 +2,7 @@ get:
   tags:
   - "UserGroupRelation"
   operationId: "getUsersInGroup"
-  description: "Gets all users in a user group"
+  description: "Gets all users in the specified user group"
   parameters:
   - name: "userGroupId"
     description: "ID of the user group to get users for"
@@ -28,7 +28,7 @@ post:
   tags:
   - "UserGroupRelation"
   operationId: "addUserToUserGroup"
-  description: "Add a user to a user group"
+  description: "Adds the specified user to the specified user group"
   requestBody:
     required: true
     content:
@@ -50,7 +50,7 @@ put:
   tags:
   - "UserGroupRelation"
   operationId: "updateUserRelationToUserGroup"
-  description: "Updates a user relation to a user group"
+  description: "Updates a user's relation to a user group"
   requestBody:
     required: true
     content:
@@ -72,7 +72,7 @@ delete:
   tags:
   - "UserGroupRelation"
   operationId: "deleteUserFromUserGroup"
-  description: "Remove a user from a user group"
+  description: "Remove the specified user from the specified user group"
   parameters:
   - name: "userId"
     description: "ID of the user to remove from the user group"
@@ -90,7 +90,7 @@ delete:
       format: "int64"
   responses:
     "200":
-      description: "User group relation for successfully deleted"
+      description: "User was successfully removed from the user group"
       content:
         application/json:
           schema:
