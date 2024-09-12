@@ -69,7 +69,7 @@ put:
     - "Tag"
   operationId: "updateTagRegistration"
   description: |
-    Updates a tag that was added to a time registration. Both mandatory and optional tags can have their value updated.
+    Updates a tag that was added to a time registration. Both mandatory and optional tags can have their values updated.
   requestBody:
     description: "A JSON object containing the updated tag information"
     required: true
