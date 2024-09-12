@@ -5,7 +5,7 @@ post:
   description: |
     Imports the given time registrations into the system.
     When importing time registrations for the calling user, the import is treated as if normally creating a time registration.
-    When registering for another user, the time registration is imported as a suggestion and enters a pending state.
+    When importing for another user, the time registrations are treated as suggestions and enters a pending state.
   requestBody:
     description: "A JSON object containing time registration information to be imported"
     required: true
