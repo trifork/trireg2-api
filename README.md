@@ -49,7 +49,7 @@ To address this, the concept of tagging is utilized. By associating a time regis
 
 A tag is defined by a name, description, and a value that can be of various types.
 
-There are three distinct categories of tags that can be associated with a time registration:
+There are three distinct categories of tags that can be associated with a time registration. The category for a tag is configured by administrators on a task by task basis:
 
 - **Mandatory Tags**:
   These tags are required for every time registration. For example, a tag named `Billable` with a value of `true` or `false` might be used to indicate whether the time is billable.
