@@ -58,7 +58,7 @@ There are three distinct categories of tags that can be associated with a time r
 - **Auto/Hidden Tags**:
   These tags are automatically added and are not visible to the user making the time registration. An example could be a `Customer` tag that includes the customer's name. This information may be valuable for upstream ERP systems when exporting data.
 
-It is important to note that **mandatory tags** and **optional tags** can overlap. 
+It is important to note the category of a tag is not a global concept.
 An administrator has the flexibility to designate a tag as optional for one task and mandatory for another.
 
 ### Download the API
