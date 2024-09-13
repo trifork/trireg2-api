@@ -1,0 +1,13 @@
+type: object
+required: ["taskId", "taskName"]
+properties:
+  taskId:
+    type: "integer"
+    format: "int64"
+    description: "The unique id of this task"
+  taskName:
+    type: string
+    description: "The name of this task, which is suitable for display to the user."
+  taskDescription:
+    type: string
+    description: "An optional description of this task."

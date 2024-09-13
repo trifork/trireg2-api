@@ -1,0 +1,13 @@
+type: object
+description: "A collection of time registrations for a specific date."
+required: ["date", "timeRegistrations"]
+properties:
+  date:
+    type: "string"
+    format: "date"
+    description: "The date of all contained time registrations"
+  timeRegistrations:
+    type: array
+    items:
+      $ref: "TimeRegistration.yaml"
+    description: "The time registrations for the specified date - can be empty."

@@ -12,20 +12,19 @@ get:
         type: string
         format: "date"
     - name: "period"
-      description: "The time period to use when deciding in which time period tasks are considered active"
+      description: |
+        The time period to use when deciding in which time period tasks are considered active. Defaults to 'WEEK'.
       in: query
-      required: false
       schema:
-        type: string
-        enum:
-          - day # Only get tasks for the specified date
-          - week # Get the tasks for the whole week (mon-sun) of the specified date
-          - month # Get the tasks for the whole month of the specified date
-        description: >
-          Valid values:
-          * `day` - Only get tasks for the specified date
-          * `week` - Get the tasks for the whole week (Monday to Sunday) of the specified date
-          * `month` - Get the tasks for the whole month of the specified date
+        $ref: "../schemas/user/OverviewPeriod.yaml"
+    - name: "extraTasks"
+      description: "An optional collection of extra tasks to include in the response, regardless of whether they are active or not"
+      in: query
+      schema:
+        type: array
+        items:
+          type: integer
+          format: int64
   responses:
     "200":
       description: "List of time registrations for the user grouped by task"
