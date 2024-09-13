@@ -32,7 +32,8 @@ post:
   tags:
     - "Tag"
   operationId: "tagTimeRegistration"
-  description: "Tags a time registration with a specified tag and tag value"
+  description: |
+    Add an optional tag to a time registration with the specified tag value
   parameters:
     - in: query
       name: "timeRegistrationId"
@@ -67,7 +68,8 @@ put:
   tags:
     - "Tag"
   operationId: "updateTagRegistration"
-  description: "Updates a tag that was added to a time registration"
+  description: |
+    Updates a tag that was added to a time registration. Both mandatory and optional tags can have their values updated.
   requestBody:
     description: "A JSON object containing the updated tag information"
     required: true
@@ -92,7 +94,7 @@ delete:
   tags:
     - "Tag"
   operationId: "deleteTagRegistration"
-  description: "Deletes a tag that was added to a time registration"
+  description: "Deletes an optional tag that was added to a time registration"
   parameters:
     - in: query
       name: "tagId"
