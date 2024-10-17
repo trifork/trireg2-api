@@ -9,6 +9,8 @@ properties:
     type: "string"
   km:
     type: "integer"
+  purpose:
+    type: "string"
   status:
     type: "string"
     enum:
