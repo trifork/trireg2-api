@@ -1,5 +1,5 @@
 type: "object"
-required: ["kmRegistrationId", "taskId", "date", "from", "to", "km", "status"]
+required: ["kmRegistrationId", "taskId", "date", "from", "to", "purpose", "km", "status"]
 properties:
   kmRegistrationId:
     type: "integer"
@@ -16,5 +16,7 @@ properties:
     type: "string"
   km:
     type: "integer"
+  purpose:
+    type: "string"
   status:
     $ref: KmRegistrationStatus.yaml

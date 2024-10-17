@@ -1,5 +1,5 @@
 type: "object"
-required: ["taskId", "date", "from", "to", "km"]
+required: ["taskId", "date", "from", "to", "km", "purpose"]
 properties:
   taskId:
     type: "integer"
@@ -13,3 +13,5 @@ properties:
     type: "string"
   km:
     type: "integer"
+  purpose:
+    type: "string"
