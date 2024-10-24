@@ -9,8 +9,7 @@ post:
     content:
       application/json:
         schema:
-          items:
-            $ref: "../schemas/user/TimeOffRegistrationRequest.yaml"
+          $ref: "../schemas/user/TimeOffRegistrationRequest.yaml"
   responses:
     "201":
       description: "Time off registrations added successfully"
