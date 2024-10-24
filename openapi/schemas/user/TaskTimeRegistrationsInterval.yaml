@@ -1,0 +1,16 @@
+type: object
+required: ["task", "dailyRegistrations"]
+description: |
+  The time registrations for some specific task. These are grouped by the days in the search interval, where the
+  registrations for each day can be empty. For example: lets assume a user has performed two differently tagged time 
+  registrations on Monday and one time registration on Wednesday in some week. If that week is queried, then the
+  response will contain an entry with the task, and an array of 'dailyRegistration' with seven entries (Monday-Sunday).
+  The Monday entry will contain two time registrations, the Wednesday entry will contain the single time registration, 
+  and the remaining five days will contain empty arrays.
+properties:
+  task:
+    $ref: Task.yaml
+  dailyRegistrations:
+    type: array
+    items:
+      $ref: DayTimeRegistrations.yaml

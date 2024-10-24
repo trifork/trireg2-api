@@ -76,7 +76,7 @@ put:
     content:
       application/json:
         schema:
-          $ref: "../schemas/user/Tag.yaml"
+          $ref: "../schemas/user/TagRegistration.yaml"
   responses:
     "200":
       description: "Tag was successfully updated"

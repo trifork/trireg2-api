@@ -1,0 +1,16 @@
+type: "object"
+required: ["timeRegistrationId", "duration", "status", "tags"]
+properties:
+  timeRegistrationId:
+    type: "integer"
+    format: "int64"
+  duration:
+    $ref: ../Duration.yaml
+  status:
+    $ref: TimeRegistrationStatus.yaml
+  tags:
+    type: array
+    items:
+      $ref: "TimeRegistrationTag.yaml"
+  description:
+    type: "string"

@@ -1,33 +1,13 @@
-type: array
-items:
-  type: object
-  properties:
-    taskId:
-      type: "integer"
-      format: "int64"
-    taskName:
-      type: string
-    taskDescription:
-      type: string
-    timeRegistrations:
-      type: array
-      items:
-        type: "object"
-        required: [ "timeRegistrationId", "registered", "date", "duration", "status" ]
-        properties:
-          timeRegistrationId:
-            type: "integer"
-            format: "int64"
-          registered:
-            type: "integer"
-            format: "int64"
-            description: "The registered time value as Unix milliseconds timestamp"
-          date:
-            type: "string"
-            format: "date"
-          duration:
-            $ref: ../Duration.yaml
-          status:
-            $ref: TimeRegistrationStatus.yaml
-          description:
-            type: "string"
+type: object
+required: ["taskTimeRegistrations", "tasklessTimeRegistrations"]
+properties:
+  taskTimeRegistrations:
+    type: array
+    items:
+      $ref: "TaskTimeRegistrationsInterval.yaml"
+    description: "The time registrations associated to tasks - can be empty."
+  tasklessTimeRegistrations:
+    type: array
+    items:
+      $ref: "TasklessTimeRegistrationsInterval.yaml"
+    description: "The time registrations that are not associated to tasks - can be empty."

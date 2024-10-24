@@ -1,0 +1,12 @@
+type: "object"
+required: ["userId", "userEmail"]
+description: |
+  Contains information about a user.
+properties:
+  userId:
+    type: "integer"
+    format: "int64"
+  userEmail:
+    description: |
+      The email of the user
+    type: string
