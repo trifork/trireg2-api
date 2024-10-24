@@ -43,8 +43,8 @@ paths:
     $ref: user/associate-task-registration.yaml
   /time-registration/bulk:
     $ref: user/time-registration-bulk.yaml
-  /time-registration/time-off:
-    $ref: user/time-off-registration.yaml
+  /time-registration/time-period:
+    $ref: user/time-period-registration.yaml
   /km-registration:
     $ref: user/km-registration.yaml
   /export:

@@ -1,0 +1,18 @@
+type: "object"
+required: ["startDate", "endDate", "taskId"]
+properties:
+  taskId:
+    type: "integer"
+    format: "int64"
+    description: |
+      Register all days in period (both included) to the given task. Uses a admin-specified amount of hours per day. All registrations are given the same description.
+  startDate:
+    type: "string"
+    format: "date"
+  endDate:
+    type: "string"
+    format: "date"
+  description:
+    type: "string"
+    description: "Description of the time registrations"
+    nullable: true

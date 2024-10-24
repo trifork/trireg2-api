@@ -1,18 +1,18 @@
 post:
   tags:
     - "TimeRegistration"
-  operationId: "addTimeOffRegistrationForUser"
-  description: "Register time off for the calling user within a specified date range. Will be converted into single time registrations for each day in the range."
+  operationId: "addTimePeriodRegistrationForUser"
+  description: "Register time period defined by a date range. Will be converted into single time registrations for each day in the range."
   requestBody:
-    description: "TaskId along with Start and end date of the time off registration"
+    description: "TaskId along with Start and end date of the period (both included). Description is optional"
     required: true
     content:
       application/json:
         schema:
-          $ref: "../schemas/user/TimeOffRegistrationRequest.yaml"
+          $ref: "../schemas/user/TimePeriodRegistrationRequest.yaml"
   responses:
     "201":
-      description: "Time off registrations added successfully"
+      description: "Time registrations within period added successfully"
       content:
         application/json:
           schema:
@@ -24,11 +24,11 @@ post:
               value: [
                 {
                   "id": 12345,
-                  "status": "The time off registration was created successfully"
+                  "status": "The time registration was created successfully"
                 },
                 {
                   "id": 12346,
-                  "status": "The time off registration was created successfully"
+                  "status": "The time registration was created successfully"
                 }
               ]
     "400":
