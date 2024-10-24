@@ -1,0 +1,42 @@
+post:
+  tags:
+    - "TimeRegistration"
+  operationId: "addTimeOffRegistrationForUser"
+  description: "Register time off for the calling user within a specified date range. Will be converted into single time registrations for each day in the range."
+  requestBody:
+    description: "TaskId along with Start and end date of the time off registration"
+    required: true
+    content:
+      application/json:
+        schema:
+          items:
+            $ref: "../schemas/user/TimeOffRegistrationRequest.yaml"
+  responses:
+    "201":
+      description: "Time off registrations added successfully"
+      content:
+        application/json:
+          schema:
+            type: "array"
+            items:
+              $ref: "../schemas/DefaultCreateResponse.yaml"
+          examples:
+            success:
+              value: [
+                {
+                  "id": 12345,
+                  "status": "The time off registration was created successfully"
+                },
+                {
+                  "id": 12346,
+                  "status": "The time off registration was created successfully"
+                }
+              ]
+    "400":
+      description: "One or more time registrations failed. If any registration fails, none of the registrations will be saved"
+      content:
+        text/plain:
+          schema:
+            type: "string"
+    "401":
+      $ref: "../responses/UnauthorizedError.yaml"

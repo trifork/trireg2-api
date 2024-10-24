@@ -45,6 +45,8 @@ paths:
     $ref: user/time-registration-bulk.yaml
   /km-registration:
     $ref: user/km-registration.yaml
+  /time-off-registration:
+    $ref: user/time-off-registration.yaml
   /export:
     $ref: user/export.yaml
   /tag:
